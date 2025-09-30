@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Card, Col, Container, Image, Row } from 'react-bootstrap';
+import fotoCampo from '../assets/images/foto-campo.jpg';
 
 function About() {
   const stacks = [
@@ -85,7 +85,7 @@ function About() {
                     backdropFilter: 'blur(10px)'
                   }}
                 >
-                  Foto de casamento aqui
+                  <Image src={fotoCampo} alt="Foto do Casamento" rounded fluid style={{ maxHeight: '100%', borderRadius: '15px' }} />
                 </div>
               </Col>
             </Row>

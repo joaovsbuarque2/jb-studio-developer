@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
+import { useState } from 'react';
+import { Button, Card, Col, Container, Modal, Row } from 'react-bootstrap';
 
 function Projects() {
   const [showModal, setShowModal] = useState(false);
@@ -14,8 +14,8 @@ function Projects() {
 
   const projects = [
     {
-      id: 'herotask',
-      title: 'HeroTask',
+      id: 'Eleva',
+      title: 'Eleva',
       subtitle: 'Evolução para o Centro da Família',
       description: 'App revolucionário que transforma o gerenciamento familiar em uma aventura épica. Mais que um app de tarefas - é o centro de organização e interação da família.',
       status: 'Em desenvolvimento ativo',
@@ -71,7 +71,7 @@ function Projects() {
         '@realm/react - Banco offline com sincronização'
       ],
       problem: 'Apps de produtividade tradicionais são individuais, chatos e não criam conexão familiar. Famílias precisam de múltiplos apps para organização.',
-      solution: 'HeroTask é o centro único de organização familiar com gamificação social, transformando tarefas domésticas em aventuras colaborativas divertidas.',
+      solution: 'Familia Aventura é o centro único de organização familiar com gamificação social, transformando tarefas domésticas em aventuras colaborativas divertidas.',
       roadmap: [
         { 
           phase: 'Q1 2024 - MVP Família', 
