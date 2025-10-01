@@ -1,11 +1,11 @@
-import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
+import { Badge, Card, Col, Container, Row } from 'react-bootstrap';
 
 // Importar screenshots do app
-import elevaHomeImg from '../../assets/images/eleva-home-atividade.jpeg';
 import elevaConfTemaImg from '../../assets/images/eleva-conf-tema.jpeg';
 import elevaConfSupImg from '../../assets/images/eleva-confi-sup.jpeg';
 import elevaCriarTarfaImg from '../../assets/images/eleva-criar-tarfa.jpeg';
 import elevaCriarTorneioImg from '../../assets/images/eleva-criar-torneio.jpeg';
+import elevaHomeImg from '../../assets/images/eleva-home-atividade.jpeg';
 
 function ElevaFeatures() {
   const features = [
@@ -38,12 +38,6 @@ function ElevaFeatures() {
       title: 'Missões e Objetivos',
       description: 'Missões diárias, objetivos semanais, metas personalizadas e desafios progressivos.',
       tags: ['Missões', 'Objetivos', 'Metas', 'Desafios']
-    },
-    {
-      icon: '🛡️',
-      title: 'Sistema de Classes',
-      description: 'Escolha sua classe (Guerreiro, Mago, Arqueiro) e desbloqueie habilidades especiais únicas.',
-      tags: ['Classes', 'Habilidades', 'Especialização', 'RPG']
     },
     {
       icon: '🎨',
@@ -184,10 +178,7 @@ function ElevaFeatures() {
             <Col lg={8} className="mx-auto text-center mb-5">
               <h2 className="eleva-section-title" data-aos="fade-up">
                 Veja o Eleva em Ação
-              </h2>
-              <p className="eleva-section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                Screenshots reais do aplicativo em desenvolvimento
-              </p>
+              </h2>\
             </Col>
           </Row>
           

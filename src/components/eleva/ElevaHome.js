@@ -153,7 +153,7 @@ function ElevaHome() {
                     Baixar para Android
                   </Button>
                 </div>
-                <p className="mt-3 text-muted">
+                <p className="mt-2 text-muted">
                   <small>Disponível em breve • Cadastre-se para early access</small>
                 </p>
               </div>

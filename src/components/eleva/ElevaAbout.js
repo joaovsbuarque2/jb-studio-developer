@@ -57,12 +57,6 @@ function ElevaAbout() {
       description: 'Desenvolvedor apaixonado por gamificação e produtividade.',
       avatar: '👨‍💻'
     },
-    {
-      name: 'Equipe JS Studio',
-      role: 'Development Team',
-      description: 'Time dedicado a criar experiências digitais incríveis.',
-      avatar: '👥'
-    }
   ];
 
   return (
@@ -75,8 +69,12 @@ function ElevaAbout() {
                 A História por Trás do Eleva
               </h1>
               <p className="eleva-page-subtitle" data-aos="fade-up" data-aos-delay="100">
-                Como surgiu a ideia de revolucionar a forma como as pessoas 
-                encaram suas tarefas diárias.
+                A ideia do Eleva surgiu da frustração com apps de produtividade tradicionais que
+                prometem muito mas entregam experiências monótonas e desmotivadoras depois de um dois meses
+                não da mais vontade de permanecer nessas aplicações.
+                Queríamos criar algo diferente, algo que tornasse a produtividade divertida e social. 
+                Principalmente para mim que sempre fui fã de jogos e gamificação.
+                E vendo que seria interesante integrar com familia e amigos, decidi criar o Eleva.
               </p>
             </Col>
           </Row>
@@ -87,20 +85,25 @@ function ElevaAbout() {
         <Container>
           <Row className="align-items-center mb-5">
             <Col lg={6}>
-              <div data-aos="fade-right">
-                <h2 className="eleva-section-title">Nossa Missão</h2>
-                <p className="eleva-section-text">
-                  Transformar a produtividade de uma obrigação chata em uma 
-                  experiência divertida e social. Acreditamos que quando você 
-                  se diverte fazendo algo, naturalmente se torna melhor nisso.
-                </p>
-                <p className="eleva-section-text">
-                  O Eleva nasceu da frustração com apps de produtividade tradicionais 
-                  que prometem muito mas entregam experiências monótonas. Nossa missão 
-                  é simple: fazer você amar ser produtivo.
-                </p>
-              </div>
-            </Col>
+  <div data-aos="fade-right">
+    <h2 className="eleva-section-title">Nossa Missão</h2>
+    <p className="eleva-section-text">
+      No Eleva, acreditamos que produtividade não precisa ser sinônimo de rotina
+      cansativa. Nossa missão é transformar tarefas do dia a dia em uma
+      experiência envolvente, divertida e conectada.
+    </p>
+    <p className="eleva-section-text">
+      Mais do que organizar compromissos, queremos criar uma jornada em que cada
+      conquista, por menor que seja, traga motivação real. O Eleva foi pensado
+      para tornar cada passo significativo e recompensador.
+    </p>
+    <p className="eleva-section-text">
+      Buscamos inspirar pessoas a enxergar a produtividade como um caminho de
+      crescimento pessoal e coletivo — onde tecnologia, gamificação e bem-estar
+      se unem para ajudar você a alcançar mais, com mais leveza.
+    </p>
+  </div>
+</Col>
             <Col lg={6}>
               <div className="mission-visual" data-aos="fade-left">
                 <div className="mission-image-container">
@@ -110,14 +113,6 @@ function ElevaAbout() {
                     className="mission-image"
                     loading="lazy"
                   />
-                  <div className="mission-overlay">
-                    <h3>🎯 Nossa Visão</h3>
-                    <p>
-                      Ser o app de produtividade mais amado do mundo, 
-                      criando uma comunidade global de pessoas que 
-                      evoluem juntas através da gamificação.
-                    </p>
-                  </div>
                 </div>
               </div>
             </Col>
@@ -246,10 +241,6 @@ function ElevaAbout() {
                   <div className="stat-item">
                     <div className="stat-number">50K+</div>
                     <div className="stat-label">Tarefas Completadas</div>
-                  </div>
-                  <div className="stat-item">
-                    <div className="stat-number">98%</div>
-                    <div className="stat-label">Satisfação</div>
                   </div>
                 </div>
               </div>
