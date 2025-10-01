@@ -1,15 +1,12 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
 
-import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
-import Company from './components/Company';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import JSStudioApp from './pages/JSStudioApp';
+import ElevaApp from './pages/ElevaApp';
 
 function App() {
   useEffect(() => {
@@ -21,16 +18,16 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Home />
-        <About />
-        <Company />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<JSStudioApp />} />
+          <Route path="/js-studio" element={<JSStudioApp />} />
+          <Route path="/eleva" element={<ElevaApp />} />
+          <Route path="/eleva/*" element={<ElevaApp />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

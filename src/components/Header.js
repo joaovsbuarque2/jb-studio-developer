@@ -1,5 +1,5 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const scrollToSection = (sectionId) => {
@@ -17,7 +17,7 @@ function Header() {
           className="fw-bold fs-4 text-gradient"
           style={{ cursor: 'pointer' }}
         >
-          JB Studio Developer
+         JB Studio Developer
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -51,6 +51,14 @@ function Header() {
               style={{ color: 'var(--text-light)', cursor: 'pointer' }}
             >
               Contato
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/eleva"
+              style={{ color: 'var(--accent-cyan)', cursor: 'pointer' }}
+              className="fw-bold"
+            >
+              ⚡ Eleva
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

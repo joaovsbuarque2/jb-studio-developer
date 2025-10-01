@@ -1,5 +1,5 @@
-/* Importar fontes - Poppins para texto, Roboto para títulos */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+/* Importar fontes - Poppins para texto, Roboto para títulos, Orbitron para Eleva */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&family=Orbitron:wght@400;500;600;700;800;900&family=Akira+Expanded&display=swap');
 
 /* Reset e base styles */
 * {
@@ -34,14 +34,14 @@ body {
   --accent-cyan: #06b6d4;
   --accent-pink: #ec4899;
   --text-light: #f1f5f9;
-  --text-muted: #94a3b8;
+  --text-muted: #a0aec0;
   --text-accent: #cbd5e1;
   --text-dark: #0f172a;
   --bg-dark: #0f172a;
-  --bg-card: rgba(30, 27, 75, 0.85);
-  --bg-card-hover: rgba(30, 27, 75, 0.95);
-  --bg-section: rgba(15, 23, 42, 0.9);
-  --bg-section-alt: rgba(76, 29, 149, 0.1);
+   --bg-card: rgba(30, 27, 75, 0.95);
+   --bg-card-hover: rgba(30, 27, 75, 1);
+   --bg-section: rgba(15, 23, 42, 0.95);
+   --bg-section-alt: rgba(76, 29, 149, 0.15);
   --border-light: rgba(148, 163, 184, 0.15);
   --border-accent: rgba(59, 130, 246, 0.3);
   --shadow-primary: rgba(30, 64, 175, 0.3);
@@ -191,6 +191,7 @@ main {
     rgba(30, 64, 175, 0.15) 0%, 
     rgba(124, 58, 237, 0.15) 50%, 
     rgba(236, 72, 153, 0.15) 100%);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -492,5 +493,1619 @@ p, span, div {
     margin: 3px;
     padding: 6px 12px;
     font-size: 0.85rem;
+  }
+}
+
+/* ===================================
+   ESTILOS ESPECÍFICOS DO ELEVA SPA
+   =================================== */
+
+/* Variáveis de cor específicas do Eleva */
+.eleva-app {
+  --eleva-primary: #6366f1;
+  --eleva-secondary: #8b5cf6;
+  --eleva-accent: #06d6a0;
+  --eleva-warning: #ffd166;
+  --eleva-danger: #f72585;
+  --eleva-success: #06d6a0;
+  --eleva-bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --eleva-bg-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --eleva-bg-card: rgba(255, 255, 255, 0.1);
+  --eleva-bg-card-hover: rgba(255, 255, 255, 0.15);
+  --eleva-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+  --eleva-shadow-hover: 0 16px 48px rgba(99, 102, 241, 0.25);
+  
+  /* Fontes específicas do Eleva */
+  --eleva-font-brand: 'Orbitron', 'Akira Expanded', sans-serif;
+  --eleva-font-heading: 'Orbitron', sans-serif;
+  --eleva-font-body: 'Poppins', sans-serif;
+}
+
+/* Header específico do Eleva */
+.eleva-navbar {
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.eleva-navbar .navbar-brand {
+  color: #ffffff !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.eleva-navbar .navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.eleva-brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+.eleva-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.eleva-brand-name {
+  font-family: var(--eleva-font-brand);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06d6a0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.eleva-brand-subtitle {
+  font-family: var(--eleva-font-body);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: -2px;
+}
+
+.brand-eleva {
+  transition: all 0.3s ease;
+}
+
+.brand-eleva:hover .eleva-brand-logo {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+}
+
+.eleva-navbar .nav-link {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.eleva-navbar .nav-link:hover,
+.eleva-navbar .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(99, 102, 241, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-eleva-cta {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-eleva-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+
+/* Hero Section do Eleva */
+.eleva-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.eleva-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.eleva-badge {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.eleva-badge .badge {
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.eleva-hero-title {
+  font-family: var(--eleva-font-brand);
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.eleva-hero-subtitle {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #06d6a0 0%, #ffd166 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-buttons {
+  margin-bottom: 4rem;
+}
+
+.btn-eleva-primary {
+  background: linear-gradient(135deg, #06d6a0 0%, #06b6d4 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(6, 214, 160, 0.3);
+}
+
+.btn-eleva-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(6, 214, 160, 0.4);
+  background: linear-gradient(135deg, #ffd166 0%, #f72585 100%);
+  color: white;
+}
+
+.btn-eleva-outline {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  background: transparent;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-eleva-outline:hover {
+  background: white;
+  color: #6366f1;
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Hero Stats */
+.hero-stats {
+  margin-top: 4rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+/* Phone Mockup */
+.eleva-phone-mockup {
+  position: relative;
+  z-index: 2;
+}
+
+.phone-frame {
+  width: 300px;
+  height: 600px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: 35px;
+  padding: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.screen-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app-header {
+  text-align: center;
+  padding: 15px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.level-badge {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.xp-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.xp-fill {
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(90deg, #06d6a0 0%, #06b6d4 100%);
+  border-radius: 4px;
+}
+
+.daily-quest {
+  background: rgba(6, 214, 160, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid rgba(6, 214, 160, 0.3);
+}
+
+.daily-quest h3 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #06d6a0;
+}
+
+.quest-item {
+  padding: 8px 0;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quest-item:last-child {
+  border-bottom: none;
+}
+
+.quest-item.completed {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+.leaderboard {
+  background: rgba(255, 209, 102, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid rgba(255, 209, 102, 0.3);
+}
+
+.leaderboard h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ffd166;
+}
+
+.rank-item {
+  padding: 5px 0;
+  font-size: 0.8rem;
+}
+
+.rank-item.gold {
+  color: #ffd166;
+  font-weight: 600;
+}
+
+/* Seções do Eleva */
+.eleva-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+.eleva-section-alt {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #1e293b 0%, #475569 50%, #64748b 100%);
+}
+
+.eleva-section-title {
+  font-family: var(--eleva-font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.eleva-section-subtitle {
+  font-size: 1.3rem;
+  color: #e2e8f0;
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0.9;
+}
+
+.eleva-page-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.eleva-page-subtitle {
+  font-size: 1.4rem;
+  color: #cbd5e1;
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0.9;
+}
+
+/* Hero sections específicas */
+.eleva-features-hero,
+.eleva-about-hero,
+.eleva-roadmap-hero,
+.eleva-contact-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 150px 0 80px;
+  text-align: center;
+}
+
+/* Cards do Eleva */
+.eleva-feature-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.eleva-feature-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.feature-tags {
+  margin-top: 1rem;
+}
+
+.eleva-tag {
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+/* Upcoming Features */
+.eleva-upcoming-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.eleva-upcoming-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.upcoming-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.upcoming-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.upcoming-description {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.status-badge.em-desenvolvimento {
+  background: rgba(6, 214, 160, 0.2);
+  color: #06d6a0;
+  border: 1px solid rgba(6, 214, 160, 0.3);
+}
+
+.status-badge.planejado {
+  background: rgba(255, 209, 102, 0.2);
+  color: #ffd166;
+  border: 1px solid rgba(255, 209, 102, 0.3);
+}
+
+.status-badge.futuro {
+  background: rgba(148, 163, 184, 0.2);
+  color: var(--text-muted);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+/* CTA Sections */
+.eleva-cta-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.cta-subtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  gap: 1rem;
+}
+
+/* Highlight boxes */
+.feature-highlight-box,
+.about-cta-box,
+.roadmap-cta-box,
+.community-cta-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.highlight-title,
+.cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-description,
+.cta-description {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* About page específico */
+.mission-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.mission-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.mission-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  color: white;
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+
+.mission-overlay h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.mission-overlay p {
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.mission-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mission-card h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.mission-card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.problem-card,
+.solution-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.problem-card:hover,
+.solution-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.problem-icon,
+.solution-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.problem-title,
+.solution-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.problem-description,
+.solution-description {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.team-avatar {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.team-role {
+  color: #a5b4fc;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.team-description {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+/* Roadmap específico */
+.roadmap-timeline {
+  position: relative;
+}
+
+.roadmap-phase {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border-radius: 25px;
+  position: relative;
+}
+
+.roadmap-phase.completed {
+  background: rgba(6, 214, 160, 0.1);
+  border: 1px solid rgba(6, 214, 160, 0.3);
+}
+
+.roadmap-phase.in-progress {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.roadmap-phase.planned {
+  background: rgba(255, 209, 102, 0.1);
+  border: 1px solid rgba(255, 209, 102, 0.3);
+}
+
+.roadmap-phase.future {
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.phase-info {
+  margin-bottom: 2rem;
+}
+
+.phase-badge {
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.phase-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.phase-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.phase-meta {
+  margin-top: 1rem;
+}
+
+.phase-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.timeline {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.phase-progress {
+  margin-top: 1rem;
+}
+
+.phase-content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+}
+
+.features-title {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.feature-item.completed {
+  opacity: 0.8;
+}
+
+.feature-item.pending {
+  opacity: 0.6;
+}
+
+.feature-icon {
+  font-size: 1rem;
+}
+
+.feature-name {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.phase-highlight {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  border-left: 3px solid rgba(99, 102, 241, 0.5);
+}
+
+.highlight-text {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.upcoming-feature-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.upcoming-feature-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.feature-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feature-meta {
+  flex: 1;
+}
+
+.feature-category-eta {
+  margin-top: 0.5rem;
+}
+
+.category-badge {
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+}
+
+.eta-text {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.community-stats {
+  margin: 2rem 0;
+}
+
+/* Contact page específico */
+.contact-method-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-method-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.method-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.method-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.method-description {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.method-highlight {
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.contact-form-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.form-subtitle {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.eleva-form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  padding: 0.75rem 1rem;
+}
+
+.eleva-form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #6366f1;
+  box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+  color: white;
+}
+
+.eleva-form-control::placeholder {
+  color: #94a3b8;
+}
+
+.faq-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.faq-question {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.community-benefits {
+  margin: 2rem 0;
+}
+
+.benefit-item {
+  text-align: center;
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-text {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+/* Responsividade do Eleva */
+@media (max-width: 1200px) {
+  .eleva-hero-title,
+  .eleva-page-title {
+    font-size: 3.5rem;
+  }
+  
+  .eleva-section-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .eleva-hero-title,
+  .eleva-page-title {
+    font-size: 3rem;
+  }
+  
+  .eleva-section-title {
+    font-size: 2.5rem;
+  }
+  
+  .phone-frame {
+    width: 250px;
+    height: 500px;
+  }
+  
+  .stats-row {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .eleva-hero {
+    padding-top: 100px;
+    text-align: center;
+  }
+  
+  .eleva-hero-title,
+  .eleva-page-title {
+    font-size: 2.5rem;
+  }
+  
+  .eleva-section-title {
+    font-size: 2.2rem;
+  }
+  
+  .eleva-section,
+  .eleva-section-alt {
+    padding: 80px 0;
+  }
+  
+  .phone-frame {
+    width: 220px;
+    height: 440px;
+    padding: 15px;
+  }
+  
+  .stats-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .roadmap-phase {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+  }
+  
+  .phase-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .eleva-hero-title,
+  .eleva-page-title {
+    font-size: 2rem;
+  }
+  
+  .eleva-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .eleva-section,
+  .eleva-section-alt {
+    padding: 60px 0;
+  }
+  
+  .phone-frame {
+    width: 200px;
+    height: 400px;
+    padding: 12px;
+  }
+  
+  .feature-highlight-box,
+  .about-cta-box,
+  .roadmap-cta-box,
+  .community-cta-box {
+    padding: 2rem;
+  }
+  
+  .contact-form-card .card-body {
+    padding: 2rem !important;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* Footer específico do Eleva */
+.eleva-footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  color: white;
+  padding: 4rem 0 2rem;
+  margin-top: auto;
+}
+
+.eleva-footer-newsletter {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  margin-bottom: 4rem;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+.newsletter-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.newsletter-subtitle {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-input {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  padding: 0.75rem 1.25rem;
+  color: white;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-input::placeholder {
+  color: var(--text-muted);
+}
+
+.newsletter-btn {
+  white-space: nowrap;
+  padding: 0.75rem 1.5rem;
+  border-radius: 15px;
+}
+
+.eleva-footer-main {
+  margin-bottom: 3rem;
+}
+
+.footer-brand {
+  margin-bottom: 2rem;
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-description {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #6366f1;
+}
+
+.download-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.download-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--text-muted);
+  border-radius: 10px;
+  padding: 0.75rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: not-allowed;
+}
+
+.download-btn:disabled {
+  opacity: 0.6;
+}
+
+.download-btn small {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.eleva-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.copyright {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-meta {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.separator {
+  margin: 0 0.5rem;
+}
+
+.version-info,
+.build-info {
+  opacity: 0.7;
+}
+
+/* Espaçamento para o main quando tem footer */
+.eleva-main {
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
+}
+
+/* App Screenshot na hero */
+.app-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Gallery de Screenshots */
+.screenshot-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.screenshot-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.screenshot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.screenshot-card:hover .screenshot-img {
+  transform: scale(1.05);
+}
+
+.screenshot-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.screenshot-card:hover .screenshot-overlay {
+  transform: translateY(0);
+}
+
+.screenshot-overlay h6 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.screenshot-overlay p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #e2e8f0;
+}
+
+/* Coming Soon Card */
+.screenshot-card.coming-soon {
+  background: rgba(148, 163, 184, 0.1);
+  border: 2px dashed rgba(148, 163, 184, 0.3);
+}
+
+.coming-soon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.coming-soon-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.coming-soon-content h6 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.coming-soon-content p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Portfolio Cards para JS Studio */
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.portfolio-overlay h6 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.portfolio-overlay p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #e2e8f0;
+}
+
+/* Responsividade do footer */
+@media (max-width: 768px) {
+  .eleva-footer {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .eleva-footer-newsletter {
+    padding: 2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .newsletter-title {
+    font-size: 1.5rem;
+  }
+  
+  .newsletter-form .d-flex {
+    flex-direction: column !important;
+  }
+  
+  .newsletter-input {
+    margin-bottom: 1rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-meta {
+    text-align: center !important;
+    margin-top: 1rem;
+  }
+  
+  .download-links {
+    align-items: center;
+  }
+  
+  .download-btn {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .eleva-footer-newsletter {
+    padding: 1.5rem 1rem;
+  }
+  
+  .brand-title {
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .brand-description {
+    text-align: center;
+  }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.scroll-to-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  color: white;
+}
+
+.scroll-to-top-btn:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
   }
 }
