@@ -102,7 +102,7 @@ function ElevaHome() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title text-white" data-aos="fade-up">
+              <h2 className="eleva-section-title" data-aos="fade-up">
                 Por que escolher o Eleva?
               </h2>
               <p

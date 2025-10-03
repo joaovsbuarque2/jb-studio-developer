@@ -1,10 +1,10 @@
-import ElevaHome from '../components/eleva/ElevaHome';
 import ElevaAbout from '../components/eleva/ElevaAbout';
-import ElevaFeatures from '../components/eleva/ElevaFeatures';
-import ElevaRoadmap from '../components/eleva/ElevaRoadmap';
 import ElevaContact from '../components/eleva/ElevaContact';
-import ElevaHeader from '../components/eleva/ElevaHeader';
+import ElevaFeatures from '../components/eleva/ElevaFeatures';
 import ElevaFooter from '../components/eleva/ElevaFooter';
+import ElevaHeader from '../components/eleva/ElevaHeader';
+import ElevaHome from '../components/eleva/ElevaHome';
+import ElevaRoadmap from '../components/eleva/ElevaRoadmap';
 import ScrollToTop from '../components/eleva/ScrollToTop';
 import ScrollToTopOnRouteChange from '../components/eleva/ScrollToTopOnRouteChange';
 

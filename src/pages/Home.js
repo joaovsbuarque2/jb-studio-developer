@@ -1,6 +1,6 @@
-import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import fotoCasal from '../assets/images/fotoCasal.jpg';
 
 function Home() {
   return (
@@ -12,12 +12,12 @@ function Home() {
               <div className="hero-content">
                 <h1>Olá 👋, eu sou João Vitor Buarque</h1>
                 <p>
-                  Desenvolvedor Front-end & Mobile apaixonado por tecnologia, 
+                  Desenvolvedor Front-end & Mobile apaixonado por tecnologia,
                   criatividade, games e boas histórias.
                 </p>
-                <Button 
-                  as={Link} 
-                  to="/projetos" 
+                <Button
+                  as={Link}
+                  to="/projetos"
                   className="btn-custom"
                   size="lg"
                 >
@@ -26,7 +26,7 @@ function Home() {
               </div>
             </Col>
             <Col lg={4} className="text-center">
-              <div 
+              <div
                 style={{
                   width: '300px',
                   height: '300px',
@@ -36,10 +36,16 @@ function Home() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '1.2rem'
+                  fontSize: '1.2rem',
                 }}
               >
-                Sua foto aqui
+                <Image
+                  src={fotoCasal}
+                  alt="Foto do Casamento"
+                  rounded
+                  fluid
+                  style={{ maxHeight: '100%', borderRadius: '15px' }}
+                />
               </div>
             </Col>
           </Row>
@@ -50,11 +56,14 @@ function Home() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center">
-              <h2 className="section-title">Bem-vindo ao meu universo digital</h2>
+              <h2 className="section-title">
+                Bem-vindo ao meu universo digital
+              </h2>
               <p className="section-subtitle">
-                Aqui você encontra minha jornada como desenvolvedor, meus projetos 
-                pessoais e um pouco da minha história. Cada linha de código é uma 
-                nova aventura, e cada projeto é uma oportunidade de crescer.
+                Aqui você encontra minha jornada como desenvolvedor, meus
+                projetos pessoais e um pouco da minha história. Cada linha de
+                código é uma nova aventura, e cada projeto é uma oportunidade de
+                crescer.
               </p>
             </Col>
           </Row>

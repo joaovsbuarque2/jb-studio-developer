@@ -168,7 +168,7 @@ function ElevaFeatures() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title text-white" data-aos="fade-up">
+              <h2 className="eleva-section-title" data-aos="fade-up">
                 Em Desenvolvimento
               </h2>
               <p
@@ -212,7 +212,7 @@ function ElevaFeatures() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title text-white" data-aos="fade-up">
+              <h2 className="eleva-section-title" data-aos="fade-up">
                 Veja o Eleva em Ação
               </h2>
               \
@@ -398,29 +398,6 @@ function ElevaFeatures() {
           </Row>
         </Container>
       </section>
-
-      {/* Modal de imagem */}
-      {modalImage && (
-        <div className="image-modal" onClick={closeModal}>
-          <div className="image-modal-close" onClick={closeModal}>
-            ×
-          </div>
-          <div
-            className="image-modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={modalImage}
-              alt={modalCaption.title}
-              className="image-modal-img"
-            />
-            <div className="image-modal-caption">
-              <h6>{modalCaption.title}</h6>
-              <p>{modalCaption.description}</p>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

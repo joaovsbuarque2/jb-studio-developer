@@ -1,13 +1,12 @@
-import React from 'react';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Button, Container, Row, Col } from 'react-bootstrap';
 
-import Header from '../components/Header';
-import Home from '../components/Home';
 import About from '../components/About';
 import Company from '../components/Company';
-import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import Header from '../components/Header';
+import Home from '../components/Home';
+import Projects from '../components/Projects';
 
 function JSStudioApp() {
   return (
@@ -20,7 +19,7 @@ function JSStudioApp() {
         <Projects />
         <Contact />
       </main>
-      
+
       {/* Seção para navegar para o Eleva */}
       <section className="section-alt section">
         <Container>
@@ -28,14 +27,10 @@ function JSStudioApp() {
             <Col lg={8} className="mx-auto text-center">
               <h2 className="section-title">Conheça nosso projeto Eleva</h2>
               <p className="section-subtitle mb-4">
-                Um app de produtividade gamificado que está revolucionando como as pessoas gerenciam suas tarefas.
+                Um app de produtividade gamificado que está revolucionando como
+                as pessoas gerenciam suas tarefas.
               </p>
-              <Button 
-                as={Link} 
-                to="/eleva" 
-                className="btn-custom" 
-                size="lg"
-              >
+              <Button as={Link} to="/eleva" className="btn-custom" size="lg">
                 Descobrir Eleva 🚀
               </Button>
             </Col>

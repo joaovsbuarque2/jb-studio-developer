@@ -99,7 +99,7 @@ function ElevaAbout() {
           <Row className="align-items-center mb-5">
             <Col lg={6}>
               <div data-aos="fade-right">
-                <h2 className="eleva-section-title text-white">Nossa Missão</h2>
+                <h2 className="eleva-section-title ">Nossa Missão</h2>
                 <p className="eleva-section-text text-white">
                   No Eleva, acreditamos que produtividade não precisa ser
                   sinônimo de rotina cansativa. Nossa missão é transformar
@@ -140,7 +140,7 @@ function ElevaAbout() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title text-white" data-aos="fade-up">
+              <h2 className="eleva-section-title" data-aos="fade-up">
                 O Problema que Identificamos
               </h2>
               <p
@@ -177,7 +177,7 @@ function ElevaAbout() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title text-white" data-aos="fade-up">
+              <h2 className="eleva-section-title" data-aos="fade-up">
                 Nossa Solução Inovadora
               </h2>
               <p
@@ -216,7 +216,7 @@ function ElevaAbout() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title text-white" data-aos="fade-up">
+              <h2 className="eleva-section-title" data-aos="fade-up">
                 Quem está por trás do Eleva
               </h2>
               <p

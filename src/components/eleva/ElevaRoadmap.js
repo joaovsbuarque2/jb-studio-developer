@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Badge, ProgressBar } from 'react-bootstrap';
+import { Badge, Card, Col, Container, ProgressBar, Row } from 'react-bootstrap';
 
 function ElevaRoadmap() {
   const roadmapPhases = [
@@ -8,7 +8,7 @@ function ElevaRoadmap() {
       subtitle: 'Fundação Sólida',
       status: 'completed',
       progress: 100,
-      timeline: 'Q4 2024',
+      timeline: 'Q4 2025',
       features: [
         { name: 'Sistema básico de tarefas', completed: true },
         { name: 'Gamificação inicial (XP e níveis)', completed: true },
@@ -24,11 +24,11 @@ function ElevaRoadmap() {
       subtitle: 'Conectando Pessoas',
       status: 'in-progress',
       progress: 75,
-      timeline: 'Q1 2025',
+      timeline: 'Q1 2026',
       features: [
         { name: 'Sistema de amigos e seguidores', completed: true },
         { name: 'Rankings e leaderboards', completed: true },
-        { name: 'Torneios semanais básicos', completed: true },
+        { name: 'Torneios semanais básicos', completed: false },
         { name: 'Chat e mensagens', completed: false },
         { name: 'Equipes e grupos', completed: false },
         { name: 'Feed de atividades sociais', completed: false },
@@ -41,7 +41,7 @@ function ElevaRoadmap() {
       subtitle: 'Inteligência Avançada',
       status: 'planned',
       progress: 25,
-      timeline: 'Q2 2025',
+      timeline: 'Q2 2026',
       features: [
         { name: 'Dashboard de analytics avançado', completed: false },
         { name: 'Relatórios de produtividade', completed: false },
@@ -58,11 +58,14 @@ function ElevaRoadmap() {
       subtitle: 'Plataforma Completa',
       status: 'future',
       progress: 0,
-      timeline: 'Q3 2025',
+      timeline: 'Q4 2026',
       features: [
         { name: 'API pública para desenvolvedores', completed: false },
         { name: 'Marketplace de plugins', completed: false },
-        { name: 'Integração com 50+ apps', completed: false },
+        {
+          name: 'Começo do desenvolvimento de um jogo usando API Eleva',
+          completed: false,
+        },
         { name: 'Sistema de recompensas premium', completed: false },
         { name: 'Modo empresarial', completed: false },
         { name: 'Versão web completa', completed: false },
@@ -242,7 +245,7 @@ function ElevaRoadmap() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title text-white" data-aos="fade-up">
+              <h2 className="eleva-section-title" data-aos="fade-up">
                 Funcionalidades em Destaque
               </h2>
               <p
@@ -297,7 +300,7 @@ function ElevaRoadmap() {
                   futuro do Eleva.
                 </p>
 
-                <div className="community-stats">
+                {/* <div className="community-stats">
                   <Row>
                     <Col md={4} className="text-center mb-3">
                       <div className="stat-number">2.5K+</div>
@@ -314,7 +317,7 @@ function ElevaRoadmap() {
                       </div>
                     </Col>
                   </Row>
-                </div>
+                </div> */}
               </div>
             </Col>
           </Row>

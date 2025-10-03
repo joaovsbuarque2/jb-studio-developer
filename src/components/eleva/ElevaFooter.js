@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 // Importar logo
@@ -11,43 +11,43 @@ function ElevaFooter() {
     produto: [
       { name: 'Funcionalidades', path: '/eleva/funcionalidades' },
       { name: 'Roadmap', path: '/eleva/roadmap' },
-      { name: 'Sobre o Eleva', path: '/eleva/sobre' }
+      { name: 'Sobre o Eleva', path: '/eleva/sobre' },
     ],
     suporte: [
       { name: 'Contato', path: '/eleva/contato' },
       { name: 'FAQ', path: '/eleva/contato#faq' },
-      { name: 'Comunidade Discord', href: '#' }
+      { name: 'Comunidade Discord', href: '#' },
     ],
     empresa: [
       { name: 'JS Studio', path: '/js-studio' },
       { name: 'Política de Privacidade', href: '#' },
-      { name: 'Termos de Uso', href: '#' }
-    ]
+      { name: 'Termos de Uso', href: '#' },
+    ],
   };
 
   const socialLinks = [
     { icon: '🐦', name: 'Twitter', href: '#' },
     { icon: '📘', name: 'Facebook', href: '#' },
     { icon: '📷', name: 'Instagram', href: '#' },
-    { icon: '💬', name: 'Discord', href: '#' }
+    { icon: '💬', name: 'Discord', href: '#' },
   ];
 
   return (
     <footer className="eleva-footer">
       <Container>
-        {/* Newsletter Section */}
         <Row className="eleva-footer-newsletter">
           <Col lg={8} className="mx-auto text-center">
             <h3 className="newsletter-title">Fique por dentro das novidades</h3>
             <p className="newsletter-subtitle">
-              Seja o primeiro a saber sobre novas funcionalidades, updates e o lançamento oficial
+              Seja o primeiro a saber sobre novas funcionalidades, updates e o
+              lançamento oficial
             </p>
             <div className="newsletter-form">
               <div className="d-flex flex-column flex-md-row gap-3 justify-content-center">
-                <input 
-                  type="email" 
-                  className="newsletter-input" 
-                  placeholder="Seu melhor email"
+                <input
+                  type="email"
+                  className="newsletter-input"
+                  placeholder="Seu email"
                 />
                 <Button className="btn-eleva-primary newsletter-btn">
                   📧 Inscrever-se
@@ -57,7 +57,6 @@ function ElevaFooter() {
           </Col>
         </Row>
 
-        {/* Main Footer Content */}
         <Row className="eleva-footer-main">
           <Col lg={4} className="mb-4">
             <div className="footer-brand">
@@ -70,13 +69,13 @@ function ElevaFooter() {
                 Eleva
               </h3>
               <p className="brand-description">
-                O app de produtividade gamificado que transforma suas tarefas 
-                diárias em uma aventura épica. Evolua sua produtividade de forma 
+                O app de produtividade gamificado que transforma suas tarefas
+                diárias em uma aventura épica. Evolua sua produtividade de forma
                 divertida e social.
               </p>
               <div className="social-links">
                 {socialLinks.map((social, index) => (
-                  <a 
+                  <a
                     key={index}
                     href={social.href}
                     className="social-link"

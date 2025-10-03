@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
 
 function ElevaContact() {
   const contactMethods = [
@@ -8,7 +8,7 @@ function ElevaContact() {
       description:
         'Junte-se à nossa comunidade ativa de beta testers e entusiastas',
       action: 'Entrar no Discord',
-      highlight: '2.5K+ membros',
+      // highlight: '2.5K+ membros',
     },
     {
       icon: '📧',
@@ -37,7 +37,7 @@ function ElevaContact() {
     {
       question: 'Quando o Eleva será lançado oficialmente?',
       answer:
-        'Estamos planejando o lançamento da versão 1.0 para Q2 2025. No momento, temos uma versão beta disponível para testers selecionados.',
+        'Estamos planejando o lançamento da versão 1.0 para Q4 2025. No momento, temos uma versão beta disponível para testers selecionados.',
     },
     {
       question: 'O app será gratuito?',
