@@ -14,9 +14,9 @@ function ElevaRoadmap() {
         { name: 'Gamificação inicial (XP e níveis)', completed: true },
         { name: 'Interface moderna e responsiva', completed: true },
         { name: 'Sistema de conquistas básico', completed: true },
-        { name: 'Perfil de usuário', completed: true }
+        { name: 'Perfil de usuário', completed: true },
       ],
-      highlight: 'Base sólida para toda a experiência gamificada'
+      highlight: 'Base sólida para toda a experiência gamificada',
     },
     {
       phase: 'Fase 2',
@@ -31,9 +31,9 @@ function ElevaRoadmap() {
         { name: 'Torneios semanais básicos', completed: true },
         { name: 'Chat e mensagens', completed: false },
         { name: 'Equipes e grupos', completed: false },
-        { name: 'Feed de atividades sociais', completed: false }
+        { name: 'Feed de atividades sociais', completed: false },
       ],
-      highlight: 'Transformando produtividade em experiência social'
+      highlight: 'Transformando produtividade em experiência social',
     },
     {
       phase: 'Fase 3',
@@ -48,9 +48,9 @@ function ElevaRoadmap() {
         { name: 'IA para sugestões personalizadas', completed: false },
         { name: 'Insights comportamentais', completed: false },
         { name: 'Automações inteligentes', completed: false },
-        { name: 'Integração com calendários', completed: false }
+        { name: 'Integração com calendários', completed: false },
       ],
-      highlight: 'Usando dados para otimizar sua produtividade'
+      highlight: 'Usando dados para otimizar sua produtividade',
     },
     {
       phase: 'Fase 4',
@@ -65,10 +65,10 @@ function ElevaRoadmap() {
         { name: 'Integração com 50+ apps', completed: false },
         { name: 'Sistema de recompensas premium', completed: false },
         { name: 'Modo empresarial', completed: false },
-        { name: 'Versão web completa', completed: false }
+        { name: 'Versão web completa', completed: false },
       ],
-      highlight: 'Criando um ecossistema completo de produtividade'
-    }
+      highlight: 'Criando um ecossistema completo de produtividade',
+    },
   ];
 
   const upcomingFeatures = [
@@ -77,48 +77,58 @@ function ElevaRoadmap() {
       title: 'Assistente IA Personalizado',
       description: 'IA que aprende seus padrões e sugere otimizações',
       eta: 'Março 2025',
-      category: 'IA'
+      category: 'IA',
     },
     {
       icon: '🏰',
       title: 'Guilds e Organizações',
       description: 'Crie e gerencie comunidades com objetivos compartilhados',
       eta: 'Abril 2025',
-      category: 'Social'
+      category: 'Social',
     },
     {
       icon: '🎨',
       title: 'Editor de Temas Avançado',
       description: 'Customize completamente a aparência do seu app',
       eta: 'Maio 2025',
-      category: 'UX'
+      category: 'UX',
     },
     {
       icon: '📊',
       title: 'Business Analytics',
       description: 'Dashboard corporativo para gestão de equipes',
       eta: 'Junho 2025',
-      category: 'Business'
-    }
+      category: 'Business',
+    },
   ];
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'completed': return 'success';
-      case 'in-progress': return 'primary';
-      case 'planned': return 'warning';
-      case 'future': return 'secondary';
-      default: return 'secondary';
+      case 'completed':
+        return 'success';
+      case 'in-progress':
+        return 'primary';
+      case 'planned':
+        return 'warning';
+      case 'future':
+        return 'secondary';
+      default:
+        return 'secondary';
     }
   };
 
   const getStatusText = (status) => {
     switch (status) {
-      case 'completed': return 'Concluído';
-      case 'in-progress': return 'Em Desenvolvimento';
-      case 'planned': return 'Planejado';
-      case 'future': return 'Futuro';
-      default: return status;
+      case 'completed':
+        return 'Concluído';
+      case 'in-progress':
+        return 'Em Desenvolvimento';
+      case 'planned':
+        return 'Planejado';
+      case 'future':
+        return 'Futuro';
+      default:
+        return status;
     }
   };
 
@@ -128,11 +138,15 @@ function ElevaRoadmap() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center">
-              <h1 className="eleva-page-title" data-aos="fade-up">
+              <h1 className="eleva-page-title text-white" data-aos="fade-up">
                 Roadmap de Desenvolvimento
               </h1>
-              <p className="eleva-page-subtitle" data-aos="fade-up" data-aos-delay="100">
-                Acompanhe nossa jornada para criar a plataforma de produtividade 
+              <p
+                className="eleva-page-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                Acompanhe nossa jornada para criar a plataforma de produtividade
                 mais avançada e divertida do mundo.
               </p>
             </Col>
@@ -144,8 +158,8 @@ function ElevaRoadmap() {
         <Container>
           <div className="roadmap-timeline">
             {roadmapPhases.map((phase, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`roadmap-phase ${phase.status}`}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
@@ -154,7 +168,7 @@ function ElevaRoadmap() {
                   <Col lg={4}>
                     <div className="phase-info">
                       <div className="phase-header">
-                        <Badge 
+                        <Badge
                           bg={getStatusColor(phase.status)}
                           className="phase-badge mb-2"
                         >
@@ -163,29 +177,31 @@ function ElevaRoadmap() {
                         <h3 className="phase-title">{phase.title}</h3>
                         <p className="phase-subtitle">{phase.subtitle}</p>
                       </div>
-                      
+
                       <div className="phase-meta">
                         <div className="phase-status mb-2">
                           <Badge bg={getStatusColor(phase.status)}>
                             {getStatusText(phase.status)}
                           </Badge>
-                          <span className="timeline ms-2">{phase.timeline}</span>
+                          <span className="timeline ms-2">
+                            {phase.timeline}
+                          </span>
                         </div>
-                        
+
                         <div className="phase-progress">
                           <div className="d-flex justify-content-between mb-1">
                             <small>Progresso</small>
                             <small>{phase.progress}%</small>
                           </div>
-                          <ProgressBar 
+                          <ProgressBar
                             variant={getStatusColor(phase.status)}
-                            now={phase.progress} 
+                            now={phase.progress}
                           />
                         </div>
                       </div>
                     </div>
                   </Col>
-                  
+
                   <Col lg={8}>
                     <Card className="phase-content">
                       <Card.Body>
@@ -193,16 +209,20 @@ function ElevaRoadmap() {
                         <Row>
                           {phase.features.map((feature, featureIndex) => (
                             <Col sm={6} key={featureIndex} className="mb-2">
-                              <div className={`feature-item ${feature.completed ? 'completed' : 'pending'}`}>
+                              <div
+                                className={`feature-item ${feature.completed ? 'completed' : 'pending'}`}
+                              >
                                 <span className="feature-icon">
                                   {feature.completed ? '✅' : '🔄'}
                                 </span>
-                                <span className="feature-name">{feature.name}</span>
+                                <span className="feature-name">
+                                  {feature.name}
+                                </span>
                               </div>
                             </Col>
                           ))}
                         </Row>
-                        
+
                         <div className="phase-highlight mt-3">
                           <p className="highlight-text">
                             <strong>💡 Destaque:</strong> {phase.highlight}
@@ -222,19 +242,23 @@ function ElevaRoadmap() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title" data-aos="fade-up">
+              <h2 className="eleva-section-title text-white" data-aos="fade-up">
                 Funcionalidades em Destaque
               </h2>
-              <p className="eleva-section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              <p
+                className="eleva-section-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 Recursos especiais que estamos desenvolvendo com muito carinho
               </p>
             </Col>
           </Row>
-          
+
           <Row>
             {upcomingFeatures.map((feature, index) => (
               <Col lg={6} key={index} className="mb-4">
-                <Card 
+                <Card
                   className="upcoming-feature-card h-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -266,14 +290,13 @@ function ElevaRoadmap() {
           <Row>
             <Col lg={8} className="mx-auto text-center">
               <div className="roadmap-cta-box" data-aos="fade-up">
-                <h3 className="cta-title mb-4">
-                  🚀 Influencie Nosso Roadmap
-                </h3>
+                <h3 className="cta-title mb-4">🚀 Influencie Nosso Roadmap</h3>
                 <p className="cta-description mb-4">
-                  Sua opinião é fundamental! Participe da nossa comunidade no Discord, 
-                  vote nas próximas funcionalidades e ajude a moldar o futuro do Eleva.
+                  Sua opinião é fundamental! Participe da nossa comunidade no
+                  Discord, vote nas próximas funcionalidades e ajude a moldar o
+                  futuro do Eleva.
                 </p>
-                
+
                 <div className="community-stats">
                   <Row>
                     <Col md={4} className="text-center mb-3">
@@ -286,7 +309,9 @@ function ElevaRoadmap() {
                     </Col>
                     <Col md={4} className="text-center mb-3">
                       <div className="stat-number">98%</div>
-                      <div className="stat-label">Features Entregues no Prazo</div>
+                      <div className="stat-label">
+                        Features Entregues no Prazo
+                      </div>
                     </Col>
                   </Row>
                 </div>

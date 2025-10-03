@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Badge, Card, Col, Container, Row } from 'react-bootstrap';
 
 // Importar screenshots do app
@@ -8,76 +9,102 @@ import elevaCriarTorneioImg from '../../assets/images/eleva-criar-torneio.jpeg';
 import elevaHomeImg from '../../assets/images/eleva-home-atividade.jpeg';
 
 function ElevaFeatures() {
+  const [modalImage, setModalImage] = useState(null);
+  const [modalCaption, setModalCaption] = useState({
+    title: '',
+    description: '',
+  });
+
+  const openModal = (imageSrc, title, description) => {
+    setModalImage(imageSrc);
+    setModalCaption({ title, description });
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+    setModalCaption({ title: '', description: '' });
+  };
+
   const features = [
     {
       icon: '🎮',
       title: 'Sistema de Gamificação Completo',
-      description: 'XP, níveis, conquistas, badges especiais e um sistema de progressão que mantém você sempre motivado.',
-      tags: ['XP', 'Níveis', 'Conquistas', 'Badges']
+      description:
+        'XP, níveis, conquistas, badges especiais e um sistema de progressão que mantém você sempre motivado.',
+      tags: ['XP', 'Níveis', 'Conquistas', 'Badges'],
     },
     {
       icon: '🏆',
       title: 'Torneios e Competições',
-      description: 'Participe de torneios semanais, desafios mensais e competições especiais com recompensas exclusivas.',
-      tags: ['Torneios', 'Rankings', 'Recompensas', 'Competição']
+      description:
+        'Participe de torneios semanais, desafios mensais e competições especiais com recompensas exclusivas.',
+      tags: ['Torneios', 'Rankings', 'Recompensas', 'Competição'],
     },
     {
       icon: '👥',
       title: 'Comunidade e Social',
-      description: 'Conecte-se com amigos, forme equipes, compartilhe conquistas e motivem-se mutuamente.',
-      tags: ['Amigos', 'Equipes', 'Chat', 'Compartilhamento']
+      description:
+        'Conecte-se com amigos, forme equipes, compartilhe conquistas e motivem-se mutuamente.',
+      tags: ['Amigos', 'Equipes', 'Chat', 'Compartilhamento'],
     },
     {
       icon: '📊',
       title: 'Analytics Avançados',
-      description: 'Relatórios detalhados, gráficos de progresso, insights de produtividade e análise de padrões.',
-      tags: ['Relatórios', 'Gráficos', 'Insights', 'Análise']
+      description:
+        'Relatórios detalhados, gráficos de progresso, insights de produtividade e análise de padrões.',
+      tags: ['Relatórios', 'Gráficos', 'Insights', 'Análise'],
     },
     {
       icon: '🎯',
       title: 'Missões e Objetivos',
-      description: 'Missões diárias, objetivos semanais, metas personalizadas e desafios progressivos.',
-      tags: ['Missões', 'Objetivos', 'Metas', 'Desafios']
+      description:
+        'Missões diárias, objetivos semanais, metas personalizadas e desafios progressivos.',
+      tags: ['Missões', 'Objetivos', 'Metas', 'Desafios'],
     },
     {
       icon: '🎨',
       title: 'Personalização Completa',
-      description: 'Temas customizáveis, avatares únicos, widgets personalizáveis e interface adaptável.',
-      tags: ['Temas', 'Avatares', 'Widgets', 'Interface']
+      description:
+        'Temas customizáveis, avatares únicos, widgets personalizáveis e interface adaptável.',
+      tags: ['Temas', 'Avatares', 'Widgets', 'Interface'],
     },
     {
       icon: '🔔',
       title: 'Notificações Inteligentes',
-      description: 'Lembretes contextuais, notificações motivacionais e alertas de oportunidades.',
-      tags: ['Lembretes', 'Motivação', 'Contexto', 'Oportunidades']
+      description:
+        'Lembretes contextuais, notificações motivacionais e alertas de oportunidades.',
+      tags: ['Lembretes', 'Motivação', 'Contexto', 'Oportunidades'],
     },
     {
       icon: '🔗',
       title: 'Integrações Poderosas',
-      description: 'Conecte com Google Calendar, Notion, Slack, Trello e mais de 50 apps populares.',
-      tags: ['Calendar', 'Notion', 'Slack', 'Automação']
-    }
+      description:
+        'Conecte com Google Calendar, Notion, Slack, Trello e mais de 50 apps populares.',
+      tags: ['Calendar', 'Notion', 'Slack', 'Automação'],
+    },
   ];
 
   const upcomingFeatures = [
     {
       icon: '🤖',
       title: 'IA Assistant',
-      description: 'Assistente pessoal que aprende seus hábitos e sugere otimizações.',
-      status: 'Em desenvolvimento'
+      description:
+        'Assistente pessoal que aprende seus hábitos e sugere otimizações.',
+      status: 'Em desenvolvimento',
     },
     {
       icon: '🌍',
       title: 'Modo Cooperativo',
-      description: 'Trabalhe em projetos colaborativos com sistema de XP compartilhado.',
-      status: 'Planejado'
+      description:
+        'Trabalhe em projetos colaborativos com sistema de XP compartilhado.',
+      status: 'Planejado',
     },
     {
       icon: '💎',
       title: 'Marketplace de Itens',
       description: 'Compre e venda itens cosméticos, temas e power-ups únicos.',
-      status: 'Futuro'
-    }
+      status: 'Futuro',
+    },
   ];
 
   return (
@@ -86,11 +113,15 @@ function ElevaFeatures() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center">
-              <h1 className="eleva-page-title" data-aos="fade-up">
+              <h1 className="eleva-page-title text-white" data-aos="fade-up">
                 Funcionalidades que Fazem a Diferença
               </h1>
-              <p className="eleva-page-subtitle" data-aos="fade-up" data-aos-delay="100">
-                Descubra como cada feature foi pensada para tornar sua jornada 
+              <p
+                className="eleva-page-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                Descubra como cada feature foi pensada para tornar sua jornada
                 de produtividade mais divertida e eficaz.
               </p>
             </Col>
@@ -103,7 +134,7 @@ function ElevaFeatures() {
           <Row>
             {features.map((feature, index) => (
               <Col lg={4} md={6} key={index} className="mb-4">
-                <Card 
+                <Card
                   className="eleva-feature-card h-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 50}
@@ -113,17 +144,14 @@ function ElevaFeatures() {
                       <div className="feature-icon">{feature.icon}</div>
                       <h5 className="feature-title">{feature.title}</h5>
                     </div>
-                    
+
                     <p className="feature-description mb-3">
                       {feature.description}
                     </p>
-                    
+
                     <div className="feature-tags">
                       {feature.tags.map((tag, tagIndex) => (
-                        <Badge 
-                          key={tagIndex}
-                          className="eleva-tag me-1 mb-1"
-                        >
+                        <Badge key={tagIndex} className="eleva-tag me-1 mb-1">
                           {tag}
                         </Badge>
                       ))}
@@ -140,19 +168,23 @@ function ElevaFeatures() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title" data-aos="fade-up">
+              <h2 className="eleva-section-title text-white" data-aos="fade-up">
                 Em Desenvolvimento
               </h2>
-              <p className="eleva-section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              <p
+                className="eleva-section-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 Funcionalidades incríveis que estão chegando em breve
               </p>
             </Col>
           </Row>
-          
+
           <Row>
             {upcomingFeatures.map((feature, index) => (
               <Col lg={4} key={index} className="mb-4">
-                <Card 
+                <Card
                   className="eleva-upcoming-card h-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -160,8 +192,12 @@ function ElevaFeatures() {
                   <Card.Body className="text-center p-4">
                     <div className="upcoming-icon mb-3">{feature.icon}</div>
                     <h5 className="upcoming-title mb-3">{feature.title}</h5>
-                    <p className="upcoming-description mb-3">{feature.description}</p>
-                    <Badge className={`status-badge ${feature.status.toLowerCase().replace(' ', '-')}`}>
+                    <p className="upcoming-description mb-3">
+                      {feature.description}
+                    </p>
+                    <Badge
+                      className={`status-badge ${feature.status.toLowerCase().replace(' ', '-')}`}
+                    >
                       {feature.status}
                     </Badge>
                   </Card.Body>
@@ -176,25 +212,33 @@ function ElevaFeatures() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title" data-aos="fade-up">
+              <h2 className="eleva-section-title text-white" data-aos="fade-up">
                 Veja o Eleva em Ação
-              </h2>\
+              </h2>
+              \
             </Col>
           </Row>
-          
+
           <Row>
             <Col lg={4} md={6} className="mb-4">
-              <Card 
+              <Card
                 className="screenshot-card"
                 data-aos="fade-up"
                 data-aos-delay="0"
               >
                 <div className="screenshot-container">
-                  <img 
-                    src={elevaHomeImg} 
+                  <img
+                    src={elevaHomeImg}
                     alt="Tela inicial - Atividades e gamificação"
                     className="screenshot-img"
                     loading="lazy"
+                    onClick={() =>
+                      openModal(
+                        elevaHomeImg,
+                        'Tela Principal',
+                        'Atividades gamificadas e progresso visual',
+                      )
+                    }
                   />
                   <div className="screenshot-overlay">
                     <h6>Tela Principal</h6>
@@ -203,19 +247,26 @@ function ElevaFeatures() {
                 </div>
               </Card>
             </Col>
-            
+
             <Col lg={4} md={6} className="mb-4">
-              <Card 
+              <Card
                 className="screenshot-card"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
                 <div className="screenshot-container">
-                  <img 
-                    src={elevaCriarTarfaImg} 
+                  <img
+                    src={elevaCriarTarfaImg}
                     alt="Criar nova tarefa"
                     className="screenshot-img"
                     loading="lazy"
+                    onClick={() =>
+                      openModal(
+                        elevaCriarTarfaImg,
+                        'Criar Tarefa',
+                        'Interface intuitiva para adicionar atividades',
+                      )
+                    }
                   />
                   <div className="screenshot-overlay">
                     <h6>Criar Tarefa</h6>
@@ -224,19 +275,26 @@ function ElevaFeatures() {
                 </div>
               </Card>
             </Col>
-            
+
             <Col lg={4} md={6} className="mb-4">
-              <Card 
+              <Card
                 className="screenshot-card"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 <div className="screenshot-container">
-                  <img 
-                    src={elevaCriarTorneioImg} 
+                  <img
+                    src={elevaCriarTorneioImg}
                     alt="Criar torneio"
                     className="screenshot-img"
                     loading="lazy"
+                    onClick={() =>
+                      openModal(
+                        elevaCriarTorneioImg,
+                        'Torneios',
+                        'Criação de competições sociais',
+                      )
+                    }
                   />
                   <div className="screenshot-overlay">
                     <h6>Torneios</h6>
@@ -245,19 +303,26 @@ function ElevaFeatures() {
                 </div>
               </Card>
             </Col>
-            
+
             <Col lg={4} md={6} className="mb-4">
-              <Card 
+              <Card
                 className="screenshot-card"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
                 <div className="screenshot-container">
-                  <img 
-                    src={elevaConfTemaImg} 
+                  <img
+                    src={elevaConfTemaImg}
                     alt="Configurações de tema"
                     className="screenshot-img"
                     loading="lazy"
+                    onClick={() =>
+                      openModal(
+                        elevaConfTemaImg,
+                        'Personalização',
+                        'Temas e configurações visuais',
+                      )
+                    }
                   />
                   <div className="screenshot-overlay">
                     <h6>Personalização</h6>
@@ -266,19 +331,26 @@ function ElevaFeatures() {
                 </div>
               </Card>
             </Col>
-            
+
             <Col lg={4} md={6} className="mb-4">
-              <Card 
+              <Card
                 className="screenshot-card"
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
                 <div className="screenshot-container">
-                  <img 
-                    src={elevaConfSupImg} 
+                  <img
+                    src={elevaConfSupImg}
                     alt="Configurações de suporte"
                     className="screenshot-img"
                     loading="lazy"
+                    onClick={() =>
+                      openModal(
+                        elevaConfSupImg,
+                        'Suporte',
+                        'Central de ajuda e configurações',
+                      )
+                    }
                   />
                   <div className="screenshot-overlay">
                     <h6>Suporte</h6>
@@ -287,9 +359,9 @@ function ElevaFeatures() {
                 </div>
               </Card>
             </Col>
-            
+
             <Col lg={4} md={6} className="mb-4">
-              <Card 
+              <Card
                 className="screenshot-card coming-soon"
                 data-aos="fade-up"
                 data-aos-delay="500"
@@ -312,20 +384,43 @@ function ElevaFeatures() {
           <Row>
             <Col lg={8} className="mx-auto text-center">
               <div className="feature-highlight-box" data-aos="fade-up">
-                <h3 className="highlight-title mb-4">
+                <h3 className="highlight-title mb-4 text-white">
                   🎮 Gamificação Nunca Foi Tão Divertida
                 </h3>
-                <p className="highlight-description">
-                  Nosso sistema de gamificação vai além de pontos simples. 
-                  Criamos uma experiência RPG completa onde cada tarefa concluída, 
-                  cada meta alcançada e cada dia produtivo contribui para sua evolução 
-                  em um universo rico e envolvente.
+                <p className="highlight-description text-white">
+                  Nosso sistema de gamificação vai além de pontos simples.
+                  Criamos uma experiência RPG completa onde cada tarefa
+                  concluída, cada meta alcançada e cada dia produtivo contribui
+                  para sua evolução em um universo rico e envolvente.
                 </p>
               </div>
             </Col>
           </Row>
         </Container>
       </section>
+
+      {/* Modal de imagem */}
+      {modalImage && (
+        <div className="image-modal" onClick={closeModal}>
+          <div className="image-modal-close" onClick={closeModal}>
+            ×
+          </div>
+          <div
+            className="image-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={modalImage}
+              alt={modalCaption.title}
+              className="image-modal-img"
+            />
+            <div className="image-modal-caption">
+              <h6>{modalCaption.title}</h6>
+              <p>{modalCaption.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

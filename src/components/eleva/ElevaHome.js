@@ -8,25 +8,25 @@ function ElevaHome() {
     { icon: '🎯', number: '10K+', label: 'Tarefas Completadas' },
     { icon: '🏆', number: '500+', label: 'Usuários Ativos' },
     { icon: '⚡', number: '95%', label: 'Taxa de Retenção' },
-    { icon: '🎮', number: '24/7', label: 'Diversão Garantida' }
+    { icon: '🎮', number: '24/7', label: 'Diversão Garantida' },
   ];
 
   const quickFeatures = [
     {
       icon: '🎮',
       title: 'Gamificação Total',
-      description: 'Transforme sua produtividade em um jogo épico'
+      description: 'Transforme sua produtividade em um jogo épico',
     },
     {
       icon: '👥',
       title: 'Social & Competitivo',
-      description: 'Compete com amigos e suba nos rankings'
+      description: 'Compete com amigos e suba nos rankings',
     },
     {
       icon: '📊',
       title: 'Análises Inteligentes',
-      description: 'Insights profundos sobre sua produtividade'
-    }
+      description: 'Insights profundos sobre sua produtividade',
+    },
   ];
 
   return (
@@ -42,26 +42,27 @@ function ElevaHome() {
                     🚀 Versão Beta Disponível
                   </span>
                 </div>
-                
+
                 <h1 className="eleva-hero-title mb-4">
                   Produtividade que
                   <span className="text-gradient"> Evolui</span>
-                  <br />com Você
+                  <br />
+                  com Você
                 </h1>
-                
+
                 <p className="eleva-hero-subtitle mb-5">
-                  O primeiro app de produtividade completamente gamificado. 
-                  Transforme suas tarefas em missões épicas, ganhe XP, 
-                  participe de torneios e faça parte de uma comunidade incrível.
+                  O primeiro app de produtividade completamente gamificado.
+                  Transforme suas tarefas em missões épicas, ganhe XP, participe
+                  de torneios e faça parte de uma comunidade incrível.
                 </p>
-                
+
                 <div className="hero-buttons d-flex flex-wrap gap-3">
                   <Button className="btn-eleva-primary" size="lg">
                     <span className="me-2">🚀</span>
                     Baixar Agora
                   </Button>
                 </div>
-                
+
                 {/* <div className="hero-stats mt-5">
                   <Row>
                     {stats.map((stat, index) => (
@@ -77,17 +78,17 @@ function ElevaHome() {
                 </div> */}
               </div>
             </Col>
-            
+
             <Col lg={6} className="text-center">
-              <div data-aos="fade-left" data-aos-delay="200">
+              <div data-aos-delay="200">
                 <div className="eleva-phone-mockup">
                   <div className="phone-frame">
-                      <img 
-                        src={elevaHomeImg} 
-                        alt="Tela inicial do Eleva - Atividades e gamificação"
-                        className="app-screenshot"
-                        loading="eager"
-                      />
+                    <img
+                      src={elevaHomeImg}
+                      alt="Tela inicial do Eleva - Atividades e gamificação"
+                      className="app-screenshot"
+                      loading="eager"
+                    />
                   </div>
                 </div>
               </div>
@@ -101,19 +102,23 @@ function ElevaHome() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title" data-aos="fade-up">
+              <h2 className="eleva-section-title text-white" data-aos="fade-up">
                 Por que escolher o Eleva?
               </h2>
-              <p className="eleva-section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              <p
+                className="eleva-section-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 Não é só mais um app de tarefas. É uma experiência completa.
               </p>
             </Col>
           </Row>
-          
+
           <Row>
             {quickFeatures.map((feature, index) => (
               <Col lg={4} key={index} className="mb-4">
-                <Card 
+                <Card
                   className="eleva-feature-card h-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -136,12 +141,12 @@ function ElevaHome() {
           <Row>
             <Col lg={8} className="mx-auto text-center">
               <div data-aos="fade-up">
-                <h2 className="cta-title mb-4">
+                <h2 className="cta-title mb-4 text-white">
                   Pronto para Evoluir sua Produtividade?
                 </h2>
-                <p className="cta-subtitle mb-5">
-                  Junte-se a milhares de usuários que já transformaram 
-                  suas tarefas em uma aventura épica.
+                <p className="cta-subtitle mb-5 text-white">
+                  Junte-se a milhares de usuários que já transformaram suas
+                  tarefas em uma aventura épica.
                 </p>
                 <div className="cta-buttons d-flex flex-wrap justify-content-center gap-3">
                   <Button className="btn-eleva-primary" size="lg">
@@ -154,7 +159,9 @@ function ElevaHome() {
                   </Button>
                 </div>
                 <p className="mt-2 text-muted">
-                  <small>Disponível em breve • Cadastre-se para early access</small>
+                  <small>
+                    Disponível em breve • Cadastre-se para early access
+                  </small>
                 </p>
               </div>
             </Col>

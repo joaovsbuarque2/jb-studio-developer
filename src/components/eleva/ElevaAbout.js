@@ -8,46 +8,53 @@ function ElevaAbout() {
     {
       icon: '😴',
       title: 'Apps Monótonos',
-      description: 'Interfaces cinzas e sem vida que desmotivam após poucos dias de uso.'
+      description:
+        'Interfaces cinzas e sem vida que desmotivam após poucos dias de uso.',
     },
     {
       icon: '📋',
       title: 'Listas Intermináveis',
-      description: 'To-do lists que só crescem, gerando ansiedade ao invés de produtividade.'
+      description:
+        'To-do lists que só crescem, gerando ansiedade ao invés de produtividade.',
     },
     {
       icon: '🔥',
       title: 'Falta de Motivação',
-      description: 'Sem recompensas ou reconhecimento pelo progresso alcançado.'
+      description:
+        'Sem recompensas ou reconhecimento pelo progresso alcançado.',
     },
     {
       icon: '👤',
       title: 'Experiência Solitária',
-      description: 'Jornada individual sem apoio da comunidade ou elementos sociais.'
-    }
+      description:
+        'Jornada individual sem apoio da comunidade ou elementos sociais.',
+    },
   ];
 
   const solutions = [
     {
       icon: '🎮',
       title: 'Gamificação Envolvente',
-      description: 'Cada tarefa é uma missão. Cada dia produtivo é uma vitória épica.'
+      description:
+        'Cada tarefa é uma missão. Cada dia produtivo é uma vitória épica.',
     },
     {
       icon: '🏆',
       title: 'Sistema de Recompensas',
-      description: 'XP, níveis, conquistas e badges que celebram cada progresso.'
+      description:
+        'XP, níveis, conquistas e badges que celebram cada progresso.',
     },
     {
       icon: '👥',
       title: 'Comunidade Ativa',
-      description: 'Torneios, rankings e colaboração que mantém você motivado.'
+      description: 'Torneios, rankings e colaboração que mantém você motivado.',
     },
     {
       icon: '📈',
       title: 'Progresso Visual',
-      description: 'Gráficos e relatórios que mostram sua evolução de forma clara.'
-    }
+      description:
+        'Gráficos e relatórios que mostram sua evolução de forma clara.',
+    },
   ];
 
   const team = [
@@ -55,7 +62,7 @@ function ElevaAbout() {
       name: 'João Vitor da Silva Buarque',
       role: 'CEO & Founder',
       description: 'Desenvolvedor apaixonado por gamificação e produtividade.',
-      avatar: '👨‍💻'
+      avatar: '👨‍💻',
     },
   ];
 
@@ -65,16 +72,22 @@ function ElevaAbout() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center">
-              <h1 className="eleva-page-title" data-aos="fade-up">
+              <h1 className="eleva-page-title text-white" data-aos="fade-up">
                 A História por Trás do Eleva
               </h1>
-              <p className="eleva-page-subtitle" data-aos="fade-up" data-aos-delay="100">
-                A ideia do Eleva surgiu da frustração com apps de produtividade tradicionais que
-                prometem muito mas entregam experiências monótonas e desmotivadoras depois de um dois meses
-                não da mais vontade de permanecer nessas aplicações.
-                Queríamos criar algo diferente, algo que tornasse a produtividade divertida e social. 
-                Principalmente para mim que sempre fui fã de jogos e gamificação.
-                E vendo que seria interesante integrar com familia e amigos, decidi criar o Eleva.
+              <p
+                className="eleva-page-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                A ideia do Eleva surgiu da frustração com apps de produtividade
+                tradicionais que prometem muito mas entregam experiências
+                monótonas e desmotivadoras depois de um dois meses não da mais
+                vontade de permanecer nessas aplicações. Queríamos criar algo
+                diferente, algo que tornasse a produtividade divertida e social.
+                Principalmente para mim que sempre fui fã de jogos e
+                gamificação. E vendo que seria interesante integrar com familia
+                e amigos, decidi criar o Eleva.
               </p>
             </Col>
           </Row>
@@ -85,30 +98,33 @@ function ElevaAbout() {
         <Container>
           <Row className="align-items-center mb-5">
             <Col lg={6}>
-  <div data-aos="fade-right">
-    <h2 className="eleva-section-title">Nossa Missão</h2>
-    <p className="eleva-section-text">
-      No Eleva, acreditamos que produtividade não precisa ser sinônimo de rotina
-      cansativa. Nossa missão é transformar tarefas do dia a dia em uma
-      experiência envolvente, divertida e conectada.
-    </p>
-    <p className="eleva-section-text">
-      Mais do que organizar compromissos, queremos criar uma jornada em que cada
-      conquista, por menor que seja, traga motivação real. O Eleva foi pensado
-      para tornar cada passo significativo e recompensador.
-    </p>
-    <p className="eleva-section-text">
-      Buscamos inspirar pessoas a enxergar a produtividade como um caminho de
-      crescimento pessoal e coletivo — onde tecnologia, gamificação e bem-estar
-      se unem para ajudar você a alcançar mais, com mais leveza.
-    </p>
-  </div>
-</Col>
+              <div data-aos="fade-right">
+                <h2 className="eleva-section-title text-white">Nossa Missão</h2>
+                <p className="eleva-section-text text-white">
+                  No Eleva, acreditamos que produtividade não precisa ser
+                  sinônimo de rotina cansativa. Nossa missão é transformar
+                  tarefas do dia a dia em uma experiência envolvente, divertida
+                  e conectada.
+                </p>
+                <p className="eleva-section-text text-white">
+                  Mais do que organizar compromissos, queremos criar uma jornada
+                  em que cada conquista, por menor que seja, traga motivação
+                  real. O Eleva foi pensado para tornar cada passo significativo
+                  e recompensador.
+                </p>
+                <p className="eleva-section-text text-white">
+                  Buscamos inspirar pessoas a enxergar a produtividade como um
+                  caminho de crescimento pessoal e coletivo — onde tecnologia,
+                  gamificação e bem-estar se unem para ajudar você a alcançar
+                  mais, com mais leveza.
+                </p>
+              </div>
+            </Col>
             <Col lg={6}>
               <div className="mission-visual" data-aos="fade-left">
                 <div className="mission-image-container">
-                  <img 
-                    src={elevaHomeImg} 
+                  <img
+                    src={elevaHomeImg}
                     alt="Interface do Eleva mostrando gamificação"
                     className="mission-image"
                     loading="lazy"
@@ -124,19 +140,23 @@ function ElevaAbout() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title" data-aos="fade-up">
+              <h2 className="eleva-section-title text-white" data-aos="fade-up">
                 O Problema que Identificamos
               </h2>
-              <p className="eleva-section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              <p
+                className="eleva-section-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 Por que apps de produtividade tradicionais falham?
               </p>
             </Col>
           </Row>
-          
+
           <Row>
             {problems.map((problem, index) => (
               <Col lg={3} md={6} key={index} className="mb-4">
-                <Card 
+                <Card
                   className="problem-card h-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -157,19 +177,23 @@ function ElevaAbout() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title" data-aos="fade-up">
+              <h2 className="eleva-section-title text-white" data-aos="fade-up">
                 Nossa Solução Inovadora
               </h2>
-              <p className="eleva-section-subtitle" data-aos="fade-up" data-aos-delay="100">
+              <p
+                className="eleva-section-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 Como o Eleva resolve cada um desses problemas
               </p>
             </Col>
           </Row>
-          
+
           <Row>
             {solutions.map((solution, index) => (
               <Col lg={3} md={6} key={index} className="mb-4">
-                <Card 
+                <Card
                   className="solution-card h-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -177,7 +201,9 @@ function ElevaAbout() {
                   <Card.Body className="text-center p-4">
                     <div className="solution-icon mb-3">{solution.icon}</div>
                     <h5 className="solution-title mb-3">{solution.title}</h5>
-                    <p className="solution-description">{solution.description}</p>
+                    <p className="solution-description">
+                      {solution.description}
+                    </p>
                   </Card.Body>
                 </Card>
               </Col>
@@ -190,19 +216,24 @@ function ElevaAbout() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center mb-5">
-              <h2 className="eleva-section-title" data-aos="fade-up">
+              <h2 className="eleva-section-title text-white" data-aos="fade-up">
                 Quem está por trás do Eleva
               </h2>
-              <p className="eleva-section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                Conheça a equipe apaixonada que está construindo o futuro da produtividade
+              <p
+                className="eleva-section-subtitle text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                Conheça a equipe apaixonada que está construindo o futuro da
+                produtividade
               </p>
             </Col>
           </Row>
-          
+
           <Row className="justify-content-center">
             {team.map((member, index) => (
               <Col lg={4} md={6} key={index} className="mb-4">
-                <Card 
+                <Card
                   className="team-card h-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -225,15 +256,16 @@ function ElevaAbout() {
           <Row>
             <Col lg={8} className="mx-auto text-center">
               <div className="about-cta-box" data-aos="fade-up">
-                <h3 className="cta-title mb-4">
+                <h3 className="cta-title mb-4 text-white">
                   Quer Fazer Parte dessa Jornada?
                 </h3>
-                <p className="cta-description mb-4">
-                  O Eleva está em constante evolução e sua opinião é fundamental 
-                  para criarmos a melhor experiência possível. Junte-se à nossa 
-                  comunidade e ajude a moldar o futuro da produtividade gamificada.
+                <p className="cta-description mb-4 text-white">
+                  O Eleva está em constante evolução e sua opinião é fundamental
+                  para criarmos a melhor experiência possível. Junte-se à nossa
+                  comunidade e ajude a moldar o futuro da produtividade
+                  gamificada.
                 </p>
-                <div className="stats-row">
+                {/* <div className="stats-row">
                   <div className="stat-item">
                     <div className="stat-number">1000+</div>
                     <div className="stat-label">Beta Testers</div>
@@ -242,7 +274,7 @@ function ElevaAbout() {
                     <div className="stat-number">50K+</div>
                     <div className="stat-label">Tarefas Completadas</div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </Col>
           </Row>

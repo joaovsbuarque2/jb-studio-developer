@@ -16,7 +16,13 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.7;
   color: #f1f5f9;
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #312e81 70%, #4c1d95 100%);
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e1b4b 40%,
+    #312e81 70%,
+    #4c1d95 100%
+  );
   background-attachment: fixed;
   font-weight: 400;
 }
@@ -37,18 +43,32 @@ body {
   --text-muted: #bccee7;
   --text-accent: #cbd5e1;
   --text-dark: #0f172a;
-  --bg-dark: #0f172a;
-   --bg-card: rgba(30, 27, 75, 0.95);
-   --bg-card-hover: rgba(30, 27, 75, 1);
-   --bg-section: rgba(15, 23, 42, 0.95);
-   --bg-section-alt: rgba(76, 29, 149, 0.15);
+  --bg-dark: #0f0f23;
+  --bg-card: rgba(30, 27, 75, 0.95);
+  --bg-card-hover: rgba(30, 27, 75, 1);
+  --bg-section: rgba(15, 23, 42, 0.95);
+  --bg-section-alt: rgba(76, 29, 149, 0.15);
   --border-light: rgba(148, 163, 184, 0.15);
   --border-accent: rgba(59, 130, 246, 0.3);
   --shadow-primary: rgba(30, 64, 175, 0.3);
   --shadow-accent: rgba(124, 58, 237, 0.3);
-  --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
-  --gradient-rainbow: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 25%, var(--accent-purple) 75%, var(--accent-pink) 100%);
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--primary-blue) 0%,
+    var(--primary-purple) 100%
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--accent-blue) 0%,
+    var(--accent-purple) 100%
+  );
+  --gradient-rainbow: linear-gradient(
+    135deg,
+    var(--accent-cyan) 0%,
+    var(--accent-blue) 25%,
+    var(--accent-purple) 75%,
+    var(--accent-pink) 100%
+  );
 }
 
 /* Header fixo */
@@ -161,7 +181,58 @@ main {
 
 .card-custom:hover {
   transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border-accent);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 0 1px var(--border-accent);
+  background: var(--bg-card-hover);
+}
+
+.card-custom:hover::before {
+  opacity: 1;
+}
+
+.card-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-rainbow);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow:
+    0 25px 50px rgba(0, 212, 255, 0.4),
+    0 0 0 1px var(--primary);
+  background: var(--surface-variant);
+  border: 1px solid var(--primary);
+}
+
+.card-custom:hover::before {
+  opacity: 1;
+}
+
+.card-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-rainbow);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 0 1px var(--border-accent);
   background: var(--bg-card-hover);
 }
 
@@ -187,10 +258,12 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, 
-    rgba(30, 64, 175, 0.15) 0%, 
-    rgba(124, 58, 237, 0.15) 50%, 
-    rgba(236, 72, 153, 0.15) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(30, 64, 175, 0.15) 0%,
+    rgba(124, 58, 237, 0.15) 50%,
+    rgba(236, 72, 153, 0.15) 100%
+  );
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
@@ -202,7 +275,11 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 70%, rgba(6, 182, 212, 0.2) 0%, transparent 50%);
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgba(6, 182, 212, 0.2) 0%,
+    transparent 50%
+  );
   z-index: 1;
 }
 
@@ -276,13 +353,20 @@ main {
 }
 
 /* Typography improvements */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   letter-spacing: -0.025em;
 }
 
-p, span, div {
+p,
+span,
+div {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -308,8 +392,13 @@ p, span, div {
 
 /* Floating animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 .floating {
@@ -318,8 +407,13 @@ p, span, div {
 
 /* Pulse animation */
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .pulse {
@@ -328,9 +422,15 @@ p, span, div {
 
 /* Gradient animation */
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .gradient-animated {
@@ -391,12 +491,43 @@ p, span, div {
   background: var(--gradient-accent);
 }
 
+/* Cor branca específica para textos da história do Eleva */
+.eleva-app .eleva-page-subtitle {
+  color: #ffffff !important;
+}
+
+.eleva-app .eleva-section-text {
+  color: #ffffff !important;
+}
+
+.eleva-app .eleva-section-subtitle {
+  color: #ffffff !important;
+}
+
+.eleva-app .problem-description,
+.eleva-app .solution-description,
+.eleva-app .team-description,
+.eleva-app .cta-description,
+.eleva-app .highlight-description {
+  color: #ffffff !important;
+}
+
+/* Cor branca específica para títulos da história do Eleva */
+.eleva-app .eleva-page-title.text-white,
+.eleva-app .eleva-section-title.text-white,
+.eleva-app .cta-title.text-white,
+.eleva-app .highlight-title.text-white {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
 /* Responsividade */
 @media (max-width: 1200px) {
   .section-title {
     font-size: 3rem;
   }
-  
+
   .section {
     padding: 100px 0;
   }
@@ -407,11 +538,11 @@ p, span, div {
     font-size: 3.5rem;
     text-align: center;
   }
-  
+
   .hero-content p {
     text-align: center;
   }
-  
+
   .section-title {
     font-size: 2.8rem;
   }
@@ -422,30 +553,30 @@ p, span, div {
     font-size: 3rem;
     line-height: 1.2;
   }
-  
+
   .section-title {
     font-size: 2.4rem;
   }
-  
+
   .section {
     padding: 80px 0;
   }
-  
+
   .hero-content p {
     font-size: 1.3rem;
   }
-  
+
   .section-subtitle {
     font-size: 1.2rem;
     margin-bottom: 3rem;
   }
-  
+
   .stack-item {
     margin: 5px;
     padding: 8px 16px;
     font-size: 0.9rem;
   }
-  
+
   .card-custom {
     margin-bottom: 1.5rem;
   }
@@ -456,39 +587,39 @@ p, span, div {
     font-size: 2.4rem;
     line-height: 1.3;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .section {
     padding: 60px 0;
   }
-  
+
   .section-subtitle {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
   }
-  
+
   .hero-content p {
     font-size: 1.1rem;
   }
-  
+
   .btn-custom {
     padding: 12px 24px;
     font-size: 0.95rem;
     width: 100%;
     margin-bottom: 0.5rem;
   }
-  
+
   .card-custom {
     border-radius: 16px;
   }
-  
+
   .lead-text {
     font-size: 1.1rem;
   }
-  
+
   .stack-item {
     margin: 3px;
     padding: 6px 12px;
@@ -502,19 +633,74 @@ p, span, div {
 
 /* Variáveis de cor específicas do Eleva */
 .eleva-app {
-  --eleva-primary: #6366f1;
-  --eleva-secondary: #8b5cf6;
-  --eleva-accent: #06d6a0;
-  --eleva-warning: #ffd166;
-  --eleva-danger: #f72585;
-  --eleva-success: #06d6a0;
-  --eleva-bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --eleva-bg-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --eleva-bg-card: rgba(255, 255, 255, 0.1);
-  --eleva-bg-card-hover: rgba(255, 255, 255, 0.15);
-  --eleva-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
-  --eleva-shadow-hover: 0 16px 48px rgba(99, 102, 241, 0.25);
-  
+  /* Cores da aplicação Eleva */
+  --eleva-border: #334155;
+  --eleva-background: #0f0f23;
+  --eleva-surface: #1a1a2e;
+  --eleva-surface-variant: #16213e;
+  --eleva-surface-disabled: rgba(241, 245, 249, 0.08);
+  --eleva-outline: #475569;
+  --eleva-outline-variant: #334155;
+  --eleva-primary: #00d4ff;
+  --eleva-primary-light: #38bfff;
+  --eleva-primary-dark: #0091cc;
+  --eleva-primary-container: #0f2a44;
+  --eleva-primary-variant: #0099cc;
+  --eleva-secondary: #ff0080;
+  --eleva-secondary-light: #ff4da6;
+  --eleva-secondary-dark: #cc0066;
+  --eleva-secondary-container: #330019;
+  --eleva-on-secondary: #ffffff;
+  --eleva-accent: #ff6b35;
+  --eleva-accent-light: #ff8a65;
+  --eleva-accent-dark: #e65100;
+  --eleva-success: #00ff88;
+  --eleva-warning: #ffbb33;
+  --eleva-error: #ff3366;
+  --eleva-info: #00ccff;
+  --eleva-disabled: rgba(241, 245, 249, 0.4);
+  --eleva-text: #e2e8f0;
+  --eleva-text-secondary: #94a3b8;
+  --eleva-text-on-primary: #0f0f23;
+  --eleva-text-on-secondary: #0f0f23;
+  --eleva-text-on-accent: #0f0f23;
+  --eleva-text-disabled: rgba(241, 245, 249, 0.4);
+
+  /* Gradientes específicos do Eleva */
+  --eleva-gradient-primary: linear-gradient(
+    135deg,
+    var(--eleva-primary) 0%,
+    var(--eleva-primary-light) 100%
+  );
+  --eleva-gradient-secondary: linear-gradient(
+    135deg,
+    var(--eleva-secondary) 0%,
+    var(--eleva-secondary-light) 100%
+  );
+  --eleva-gradient-accent: linear-gradient(
+    135deg,
+    var(--eleva-accent) 0%,
+    var(--eleva-accent-light) 100%
+  );
+  --eleva-gradient-rainbow: linear-gradient(
+    135deg,
+    var(--eleva-primary) 0%,
+    var(--eleva-secondary) 50%,
+    var(--eleva-accent) 100%
+  );
+  --eleva-gradient-background: linear-gradient(
+    135deg,
+    var(--eleva-background) 0%,
+    var(--eleva-surface) 50%,
+    var(--eleva-surface-variant) 100%
+  );
+
+  /* Sombras específicas do Eleva */
+  --eleva-shadow-primary: 0 8px 32px rgba(0, 212, 255, 0.15);
+  --eleva-shadow-secondary: 0 8px 32px rgba(255, 0, 128, 0.15);
+  --eleva-shadow-accent: 0 8px 32px rgba(255, 107, 53, 0.15);
+  --eleva-shadow-hover: 0 16px 48px rgba(0, 212, 255, 0.25);
+
   /* Fontes específicas do Eleva */
   --eleva-font-brand: 'Orbitron', 'Akira Expanded', sans-serif;
   --eleva-font-heading: 'Orbitron', sans-serif;
@@ -523,11 +709,12 @@ p, span, div {
 
 /* Header específico do Eleva */
 .eleva-navbar {
-  background: rgba(15, 23, 42, 0.95) !important;
+  background: var(--eleva-background) !important;
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+  border-bottom: 1px solid var(--eleva-border);
   padding: 1rem 0;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 20px var(--eleva-shadow-primary);
 }
 
 .eleva-navbar .navbar-brand {
@@ -561,8 +748,8 @@ p, span, div {
   font-family: var(--eleva-font-brand);
   font-size: 1.8rem;
   font-weight: 900;
-  color: #ffffff;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06d6a0 100%);
+  color: var(--eleva-text);
+  background: var(--eleva-gradient-rainbow);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -573,7 +760,7 @@ p, span, div {
 .eleva-brand-subtitle {
   font-family: var(--eleva-font-body);
   font-size: 0.7rem;
-  color: var(--text-muted);
+  color: var(--eleva-text-secondary);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -589,47 +776,71 @@ p, span, div {
 }
 
 .eleva-navbar .nav-link {
-  color: #e2e8f0 !important;
+  color: var(--eleva-text) !important;
   font-weight: 500;
   padding: 0.75rem 1.25rem !important;
   border-radius: 8px;
   transition: all 0.3s ease;
   position: relative;
+  border: 1px solid transparent;
 }
 
 .eleva-navbar .nav-link:hover,
 .eleva-navbar .nav-link.active {
-  color: #ffffff !important;
-  background: rgba(99, 102, 241, 0.2);
+  color: var(--eleva-text-on-primary) !important;
+  background: var(--eleva-gradient-primary);
   transform: translateY(-1px);
+  border: 1px solid var(--eleva-border);
+  box-shadow: 0 4px 15px var(--eleva-shadow-primary);
 }
 
 .btn-eleva-cta {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  border: none;
-  color: white;
+  background: var(--eleva-gradient-primary);
+  border: 1px solid var(--eleva-border);
+  color: var(--eleva-text-on-primary);
   font-weight: 600;
   padding: 0.5rem 1.25rem;
   border-radius: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 15px var(--eleva-shadow-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-eleva-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--eleva-gradient-secondary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .btn-eleva-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
-  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  box-shadow: 0 8px 25px var(--eleva-shadow-secondary);
+  color: var(--eleva-text-on-secondary);
+  border-color: var(--eleva-secondary);
+}
+
+.btn-eleva-cta:hover::before {
+  opacity: 1;
 }
 
 /* Hero Section do Eleva */
 .eleva-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--eleva-gradient-rainbow);
   min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding-top: 80px;
+  border-bottom: 2px solid var(--eleva-border);
 }
 
 .eleva-hero::before {
@@ -639,9 +850,18 @@ p, span, div {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
-              radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%);
-  background-color: rgba(0, 0, 0, 0.3);
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(0, 212, 255, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(255, 0, 128, 0.3) 0%,
+      transparent 50%
+    );
+  background-color: rgba(15, 15, 35, 0.3);
   z-index: 1;
 }
 
@@ -669,10 +889,10 @@ p, span, div {
   font-family: var(--eleva-font-brand);
   font-size: 4.5rem;
   font-weight: 900;
-  color: white;
+  color: var(--eleva-text);
   margin-bottom: 2rem;
   line-height: 1.1;
-  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 4px 8px rgba(15, 15, 35, 0.3);
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
@@ -685,8 +905,18 @@ p, span, div {
   font-weight: 400;
 }
 
+/* Text gradient global (JB Studio) */
 .text-gradient {
-  background: linear-gradient(135deg, #06d6a0 0%, #ffd166 100%);
+  background: var(--gradient-rainbow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* Text gradient específico do Eleva */
+.eleva-app .text-gradient {
+  background: var(--eleva-gradient-accent);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -697,39 +927,77 @@ p, span, div {
 }
 
 .btn-eleva-primary {
-  background: linear-gradient(135deg, #06d6a0 0%, #06b6d4 100%);
-  border: none;
-  color: white;
+  background: var(--eleva-gradient-primary);
+  border: 1px solid var(--eleva-border);
+  color: var(--eleva-text-on-primary);
   font-weight: 600;
   padding: 1rem 2.5rem;
   border-radius: 30px;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(6, 214, 160, 0.3);
+  box-shadow: 0 8px 25px var(--eleva-shadow-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-eleva-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--eleva-gradient-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .btn-eleva-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(6, 214, 160, 0.4);
-  background: linear-gradient(135deg, #ffd166 0%, #f72585 100%);
-  color: white;
+  box-shadow: 0 15px 35px var(--eleva-shadow-accent);
+  color: var(--eleva-text-on-accent);
+  border-color: var(--eleva-accent);
+}
+
+.btn-eleva-primary:hover::before {
+  opacity: 1;
 }
 
 .btn-eleva-outline {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  border: 2px solid var(--eleva-border);
+  color: var(--eleva-text);
   background: transparent;
   font-weight: 500;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-eleva-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--eleva-gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .btn-eleva-outline:hover {
-  background: white;
-  color: #6366f1;
-  border-color: white;
+  color: var(--eleva-text-on-primary);
+  border-color: var(--eleva-primary);
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--eleva-shadow-primary);
+}
+
+.btn-eleva-outline:hover::before {
+  opacity: 1;
 }
 
 /* Hero Stats */
@@ -769,27 +1037,57 @@ p, span, div {
 .phone-frame {
   width: 300px;
   height: 600px;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  background: var(--surface);
   border-radius: 35px;
   padding: 20px;
   margin: 0 auto;
   position: relative;
+  border: 2px solid var(--border);
+  box-shadow: 0 20px 60px var(--shadow-primary);
+  overflow: hidden;
+}
+
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--eleva-gradient-primary);
+  opacity: 0.05;
+  border-radius: 35px;
+  pointer-events: none;
 }
 
 .screen-content {
-  color: white;
+  color: var(--text);
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .app-header {
   text-align: center;
   padding: 15px;
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(0, 212, 255, 0.1);
   border-radius: 15px;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-primary);
 }
 
 .level-badge {
@@ -809,21 +1107,34 @@ p, span, div {
 .xp-fill {
   width: 75%;
   height: 100%;
-  background: linear-gradient(90deg, #06d6a0 0%, #06b6d4 100%);
+  background: var(--gradient-primary);
   border-radius: 4px;
+  box-shadow: 0 0 10px var(--primary);
 }
 
 .daily-quest {
-  background: rgba(6, 214, 160, 0.1);
+  background: rgba(0, 255, 136, 0.1);
   border-radius: 15px;
   padding: 15px;
-  border: 1px solid rgba(6, 214, 160, 0.3);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.daily-quest::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--success) 0%, var(--primary) 100%);
 }
 
 .daily-quest h3 {
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #06d6a0;
+  color: var(--success);
 }
 
 .quest-item {
@@ -842,16 +1153,28 @@ p, span, div {
 }
 
 .leaderboard {
-  background: rgba(255, 209, 102, 0.1);
+  background: rgba(255, 187, 51, 0.1);
   border-radius: 15px;
   padding: 15px;
-  border: 1px solid rgba(255, 209, 102, 0.3);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.leaderboard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--warning) 0%, var(--accent) 100%);
 }
 
 .leaderboard h4 {
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #ffd166;
+  color: var(--warning);
 }
 
 .rank-item {
@@ -859,30 +1182,59 @@ p, span, div {
   font-size: 0.8rem;
 }
 
-.rank-item.gold {
-  color: #ffd166;
+.eleva-app .rank-item.gold {
+  color: var(--eleva-warning);
   font-weight: 600;
+  text-shadow: 0 0 5px var(--eleva-warning);
 }
 
 /* Seções do Eleva */
 .eleva-section {
   padding: 120px 0;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  background: var(--eleva-surface);
+  border-top: 1px solid var(--eleva-border);
+  border-bottom: 1px solid var(--eleva-border);
+  position: relative;
+}
+
+.eleva-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-primary);
+  opacity: 0.7;
 }
 
 .eleva-section-alt {
   padding: 120px 0;
-  background: linear-gradient(135deg, #1e293b 0%, #475569 50%, #64748b 100%);
+  background: var(--eleva-surface-variant);
+  border-top: 1px solid var(--eleva-outline);
+  border-bottom: 1px solid var(--eleva-outline);
+  position: relative;
+}
+
+.eleva-section-alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-secondary);
+  opacity: 0.7;
 }
 
 .eleva-section-title {
   font-family: var(--eleva-font-heading);
   font-size: 3.5rem;
   font-weight: 800;
-  color: white;
+  color: var(--eleva-text);
   text-align: center;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  background: var(--eleva-gradient-rainbow);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -892,7 +1244,7 @@ p, span, div {
 
 .eleva-section-subtitle {
   font-size: 1.3rem;
-  color: #e2e8f0;
+  color: var(--eleva-text);
   text-align: center;
   margin-bottom: 4rem;
   opacity: 0.9;
@@ -901,10 +1253,10 @@ p, span, div {
 .eleva-page-title {
   font-size: 4rem;
   font-weight: 900;
-  color: white;
+  color: var(--eleva-text);
   text-align: center;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #c6cce6 0%, #bf9ae4 100%);
+  background: var(--eleva-gradient-rainbow);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -912,7 +1264,7 @@ p, span, div {
 
 .eleva-page-subtitle {
   font-size: 1.4rem;
-  color: #cbd5e1;
+  color: var(--eleva-text-secondary);
   text-align: center;
   margin-bottom: 4rem;
   opacity: 0.9;
@@ -923,25 +1275,70 @@ p, span, div {
 .eleva-about-hero,
 .eleva-roadmap-hero,
 .eleva-contact-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--eleva-gradient-rainbow);
   padding: 150px 0 80px;
   text-align: center;
+  border-bottom: 2px solid var(--eleva-border);
+  position: relative;
+}
+
+.eleva-features-hero::before,
+.eleva-about-hero::before,
+.eleva-roadmap-hero::before,
+.eleva-contact-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(0, 212, 255, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(255, 0, 128, 0.3) 0%,
+      transparent 50%
+    );
+  background-color: rgba(15, 15, 35, 0.3);
+  z-index: 1;
 }
 
 /* Cards do Eleva */
 .eleva-feature-card {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--eleva-surface);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--eleva-border);
   border-radius: 20px;
   transition: all 0.3s ease;
   overflow: hidden;
+  position: relative;
+}
+
+.eleva-feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .eleva-feature-card:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background: var(--eleva-surface-variant);
+  box-shadow: 0 20px 40px var(--eleva-shadow-primary);
+  border: 1px solid var(--eleva-primary);
+}
+
+.eleva-feature-card:hover::before {
+  opacity: 1;
 }
 
 .feature-icon {
@@ -949,15 +1346,15 @@ p, span, div {
   margin-bottom: 1rem;
 }
 
-.feature-title {
+.eleva-app .feature-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: white;
+  color: var(--eleva-text);
   margin-bottom: 1rem;
 }
 
-.feature-description {
-  color: #cbd5e1;
+.eleva-app .feature-description {
+  color: var(--eleva-text-secondary);
   line-height: 1.6;
 }
 
@@ -966,26 +1363,65 @@ p, span, div {
 }
 
 .eleva-tag {
-  background: rgba(99, 102, 241, 0.2);
-  color: #a5b4fc;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(0, 212, 255, 0.2);
+  color: var(--primary-light);
+  border: 1px solid var(--border);
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eleva-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.eleva-tag:hover::before {
+  opacity: 0.3;
 }
 
 /* Upcoming Features */
 .eleva-upcoming-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--eleva-surface);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--eleva-border);
   border-radius: 20px;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.eleva-upcoming-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .eleva-upcoming-card:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--eleva-surface-variant);
+  border-color: var(--eleva-accent);
+  box-shadow: 0 20px 40px var(--eleva-shadow-accent);
+}
+
+.eleva-upcoming-card:hover::before {
+  opacity: 1;
 }
 
 .upcoming-icon {
@@ -993,14 +1429,14 @@ p, span, div {
   margin-bottom: 1rem;
 }
 
-.upcoming-title {
+.eleva-app .upcoming-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: white;
+  color: var(--eleva-text);
 }
 
-.upcoming-description {
-  color: #cbd5e1;
+.eleva-app .upcoming-description {
+  color: var(--eleva-text-secondary);
   font-size: 0.95rem;
 }
 
@@ -1011,41 +1447,59 @@ p, span, div {
   font-weight: 600;
 }
 
-.status-badge.em-desenvolvimento {
-  background: rgba(6, 214, 160, 0.2);
-  color: #06d6a0;
-  border: 1px solid rgba(6, 214, 160, 0.3);
+.eleva-app .status-badge.em-desenvolvimento {
+  background: rgba(0, 255, 136, 0.2);
+  color: var(--eleva-success);
+  border: 1px solid var(--eleva-border);
 }
 
-.status-badge.planejado {
-  background: rgba(255, 209, 102, 0.2);
-  color: #ffd166;
-  border: 1px solid rgba(255, 209, 102, 0.3);
+.eleva-app .status-badge.planejado {
+  background: rgba(255, 187, 51, 0.2);
+  color: var(--eleva-warning);
+  border: 1px solid var(--eleva-border);
 }
 
-.status-badge.futuro {
-  background: rgba(148, 163, 184, 0.2);
-  color: var(--text-muted);
-  border: 1px solid rgba(148, 163, 184, 0.3);
+.eleva-app .status-badge.futuro {
+  background: var(--eleva-surface-disabled);
+  color: var(--eleva-text-disabled);
+  border: 1px solid var(--eleva-outline-variant);
 }
 
 /* CTA Sections */
 .eleva-cta-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  background: var(--eleva-surface-variant);
   text-align: center;
+  border-top: 1px solid var(--eleva-border);
+  border-bottom: 1px solid var(--eleva-border);
+  position: relative;
 }
 
-.cta-title {
+.eleva-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-accent);
+  opacity: 0.8;
+}
+
+.eleva-app .cta-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: white;
+  color: var(--eleva-text);
   margin-bottom: 1.5rem;
+  background: var(--eleva-gradient-rainbow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.cta-subtitle {
+.eleva-app .cta-subtitle {
   font-size: 1.2rem;
-  color: #cbd5e1;
+  color: var(--eleva-text-secondary);
   margin-bottom: 3rem;
   opacity: 0.9;
 }
@@ -1059,27 +1513,67 @@ p, span, div {
 .about-cta-box,
 .roadmap-cta-box,
 .community-cta-box {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border);
   border-radius: 25px;
   padding: 3rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-highlight-box::before,
+.about-cta-box::before,
+.roadmap-cta-box::before,
+.community-cta-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-rainbow);
+  opacity: 0.8;
 }
 
 .highlight-title,
 .cta-title {
   font-size: 2rem;
   font-weight: 700;
-  color: white;
+  color: var(--text-light);
   margin-bottom: 1.5rem;
 }
 
 .highlight-description,
 .cta-description {
   font-size: 1.1rem;
-  color: #cbd5e1;
+  color: var(--text-muted);
   line-height: 1.7;
+}
+
+/* Estilos específicos para o Eleva */
+.eleva-app .highlight-title,
+.eleva-app .cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--eleva-text);
+  margin-bottom: 1.5rem;
+}
+
+.eleva-app .highlight-description,
+.eleva-app .cta-description {
+  font-size: 1.1rem;
+  color: var(--eleva-text-secondary);
+  line-height: 1.7;
+}
+
+/* Texto das seções específicas do Eleva */
+.eleva-app .eleva-section-text {
+  font-size: 1.1rem;
+  color: var(--eleva-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
 /* About page específico */
@@ -1125,39 +1619,73 @@ p, span, div {
   margin: 0;
 }
 
-.mission-card {
-  background: rgba(255, 255, 255, 0.1);
+.eleva-app .mission-card {
+  background: var(--eleva-surface);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--eleva-border);
   border-radius: 20px;
   padding: 2rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.mission-card h3 {
-  color: white;
+.eleva-app .mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-primary);
+}
+
+.eleva-app .mission-card h3 {
+  color: var(--eleva-text);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
-.mission-card p {
-  color: #cbd5e1;
+.eleva-app .mission-card p {
+  color: var(--eleva-text-secondary);
   line-height: 1.6;
 }
 
-.problem-card,
-.solution-card {
-  background: rgba(255, 255, 255, 0.08);
+.eleva-app .problem-card,
+.eleva-app .solution-card {
+  background: var(--eleva-surface);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--eleva-border);
   border-radius: 20px;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.problem-card:hover,
-.solution-card:hover {
+.eleva-app .problem-card::before,
+.eleva-app .solution-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-secondary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.eleva-app .problem-card:hover,
+.eleva-app .solution-card:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--eleva-surface-variant);
+  border-color: var(--eleva-secondary);
+  box-shadow: 0 20px 40px var(--eleva-shadow-secondary);
+}
+
+.eleva-app .problem-card:hover::before,
+.eleva-app .solution-card:hover::before {
+  opacity: 1;
 }
 
 .problem-icon,
@@ -1166,31 +1694,51 @@ p, span, div {
   margin-bottom: 1rem;
 }
 
-.problem-title,
-.solution-title {
+.eleva-app .problem-title,
+.eleva-app .solution-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: white;
+  color: var(--eleva-text);
   margin-bottom: 1rem;
 }
 
-.problem-description,
-.solution-description {
-  color: #cbd5e1;
+.eleva-app .problem-description,
+.eleva-app .solution-description {
+  color: var(--eleva-text-secondary);
   line-height: 1.6;
 }
 
-.team-card {
-  background: rgba(255, 255, 255, 0.1);
+.eleva-app .team-card {
+  background: var(--eleva-surface);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--eleva-border);
   border-radius: 20px;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.team-card:hover {
+.eleva-app .team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.eleva-app .team-card:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--eleva-surface-variant);
+  border-color: var(--eleva-accent);
+  box-shadow: 0 20px 40px var(--eleva-shadow-accent);
+}
+
+.eleva-app .team-card:hover::before {
+  opacity: 1;
 }
 
 .team-avatar {
@@ -1198,20 +1746,20 @@ p, span, div {
   margin-bottom: 1rem;
 }
 
-.team-name {
+.eleva-app .team-name {
   font-size: 1.3rem;
   font-weight: 700;
-  color: white;
+  color: var(--eleva-text);
 }
 
-.team-role {
-  color: #a5b4fc;
+.eleva-app .team-role {
+  color: var(--eleva-primary-light);
   font-weight: 500;
   font-size: 0.95rem;
 }
 
-.team-description {
-  color: #cbd5e1;
+.eleva-app .team-description {
+  color: var(--eleva-text-secondary);
   line-height: 1.6;
 }
 
@@ -1226,15 +1774,19 @@ p, span, div {
   text-align: center;
 }
 
-.stat-number {
+.eleva-app .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: white;
+  color: var(--eleva-text);
   margin-bottom: 0.5rem;
+  background: var(--eleva-gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.stat-label {
-  color: #cbd5e1;
+.eleva-app .stat-label {
+  color: var(--eleva-text-secondary);
   font-size: 0.9rem;
 }
 
@@ -1250,24 +1802,68 @@ p, span, div {
   position: relative;
 }
 
-.roadmap-phase.completed {
-  background: rgba(6, 214, 160, 0.1);
-  border: 1px solid rgba(6, 214, 160, 0.3);
+.eleva-app .roadmap-phase.completed {
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid var(--eleva-border);
+  position: relative;
+  overflow: hidden;
 }
 
-.roadmap-phase.in-progress {
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+.eleva-app .roadmap-phase.completed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--eleva-success) 0%,
+    var(--eleva-primary) 100%
+  );
 }
 
-.roadmap-phase.planned {
-  background: rgba(255, 209, 102, 0.1);
-  border: 1px solid rgba(255, 209, 102, 0.3);
+.eleva-app .roadmap-phase.in-progress {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid var(--eleva-border);
+  position: relative;
+  overflow: hidden;
 }
 
-.roadmap-phase.future {
-  background: rgba(148, 163, 184, 0.1);
-  border: 1px solid rgba(148, 163, 184, 0.3);
+.eleva-app .roadmap-phase.in-progress::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-primary);
+}
+
+.eleva-app .roadmap-phase.planned {
+  background: rgba(255, 187, 51, 0.1);
+  border: 1px solid var(--eleva-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.eleva-app .roadmap-phase.planned::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--eleva-warning) 0%,
+    var(--eleva-accent) 100%
+  );
+}
+
+.eleva-app .roadmap-phase.future {
+  background: var(--eleva-surface-disabled);
+  border: 1px solid var(--eleva-outline-variant);
 }
 
 .phase-info {
@@ -1527,7 +2123,7 @@ p, span, div {
   .eleva-page-title {
     font-size: 3.5rem;
   }
-  
+
   .eleva-section-title {
     font-size: 3rem;
   }
@@ -1538,16 +2134,16 @@ p, span, div {
   .eleva-page-title {
     font-size: 3rem;
   }
-  
+
   .eleva-section-title {
     font-size: 2.5rem;
   }
-  
+
   .phone-frame {
     width: 250px;
     height: 500px;
   }
-  
+
   .stats-row {
     gap: 2rem;
   }
@@ -1558,47 +2154,47 @@ p, span, div {
     padding-top: 100px;
     text-align: center;
   }
-  
+
   .eleva-hero-title,
   .eleva-page-title {
     font-size: 2.5rem;
   }
-  
+
   .eleva-section-title {
     font-size: 2.2rem;
   }
-  
+
   .eleva-section,
   .eleva-section-alt {
     padding: 80px 0;
   }
-  
+
   .phone-frame {
     width: 220px;
     height: 440px;
     padding: 15px;
   }
-  
+
   .stats-row {
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .hero-buttons .btn {
     width: 100%;
     max-width: 300px;
   }
-  
+
   .roadmap-phase {
     margin-bottom: 3rem;
     padding: 1.5rem;
   }
-  
+
   .phase-title {
     font-size: 1.5rem;
   }
@@ -1609,33 +2205,33 @@ p, span, div {
   .eleva-page-title {
     font-size: 2rem;
   }
-  
+
   .eleva-section-title {
     font-size: 1.8rem;
   }
-  
+
   .eleva-section,
   .eleva-section-alt {
     padding: 60px 0;
   }
-  
+
   .phone-frame {
     width: 200px;
     height: 400px;
     padding: 12px;
   }
-  
+
   .feature-highlight-box,
   .about-cta-box,
   .roadmap-cta-box,
   .community-cta-box {
     padding: 2rem;
   }
-  
+
   .contact-form-card .card-body {
     padding: 2rem !important;
   }
-  
+
   .stat-number {
     font-size: 2rem;
   }
@@ -1643,30 +2239,54 @@ p, span, div {
 
 /* Footer específico do Eleva */
 .eleva-footer {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  color: white;
+  background: var(--eleva-background);
+  color: var(--eleva-text);
   padding: 4rem 0 2rem;
   margin-top: auto;
+  border-top: 2px solid var(--eleva-border);
+  position: relative;
+}
+
+.eleva-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--eleva-gradient-rainbow);
 }
 
 .eleva-footer-newsletter {
-  background: rgba(99, 102, 241, 0.2);
+  background: var(--surface);
   border-radius: 25px;
   padding: 3rem 2rem;
   margin-bottom: 4rem;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  border: 1px solid var(--border);
   backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.eleva-footer-newsletter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-primary);
 }
 
 .newsletter-title {
   font-size: 2rem;
   font-weight: 700;
-  color: white;
+  color: var(--text);
   margin-bottom: 1rem;
 }
 
 .newsletter-subtitle {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
@@ -1677,11 +2297,11 @@ p, span, div {
 }
 
 .newsletter-input {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--surface-variant);
+  border: 1px solid var(--border);
   border-radius: 15px;
   padding: 0.75rem 1.25rem;
-  color: white;
+  color: var(--text);
   font-size: 1rem;
   flex: 1;
   min-width: 0;
@@ -1689,13 +2309,13 @@ p, span, div {
 
 .newsletter-input:focus {
   outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem var(--shadow-primary);
+  background: var(--surface-variant);
 }
 
 .newsletter-input::placeholder {
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .newsletter-btn {
@@ -1715,7 +2335,7 @@ p, span, div {
 .brand-title {
   font-size: 2rem;
   font-weight: 800;
-  color: white;
+  color: var(--text);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -1723,7 +2343,7 @@ p, span, div {
 }
 
 .brand-description {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -1739,25 +2359,28 @@ p, span, div {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--surface-variant);
   border-radius: 10px;
-  color: white;
+  color: var(--text);
   text-decoration: none;
   font-size: 1.2rem;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
 }
 
 .social-link:hover {
-  background: rgba(99, 102, 241, 0.3);
+  background: var(--gradient-primary);
   transform: translateY(-2px);
-  color: white;
+  color: var(--text-on-primary);
+  border-color: var(--primary);
+  box-shadow: 0 4px 15px var(--shadow-primary);
 }
 
 .footer-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: white;
+  color: var(--text);
   margin-bottom: 1.5rem;
 }
 
@@ -1772,14 +2395,15 @@ p, span, div {
 }
 
 .footer-link {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.95rem;
   transition: all 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #6366f1;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
 }
 
 .download-links {
@@ -1789,9 +2413,9 @@ p, span, div {
 }
 
 .download-btn {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: var(--text-muted);
+  background: var(--surface-disabled);
+  border: 1px solid var(--outline-variant);
+  color: var(--text-disabled);
   border-radius: 10px;
   padding: 0.75rem;
   text-align: center;
@@ -1809,19 +2433,19 @@ p, span, div {
 }
 
 .eleva-footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--outline-variant);
   padding-top: 2rem;
   margin-top: 2rem;
 }
 
 .copyright {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin: 0;
 }
 
 .footer-meta {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 0.85rem;
 }
 
@@ -1846,23 +2470,27 @@ p, span, div {
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  position: relative;
+  z-index: 3;
+  opacity: 1 !important;
 }
 
 /* Gallery de Screenshots */
-.screenshot-card {
-  background: rgba(255, 255, 255, 0.1);
+.eleva-app .screenshot-card {
+  background: var(--eleva-surface);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--eleva-border);
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.screenshot-card:hover {
+.eleva-app .screenshot-card:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: var(--eleva-surface-variant);
+  box-shadow: 0 20px 40px var(--eleva-shadow-primary);
+  border-color: var(--eleva-primary);
 }
 
 .screenshot-container {
@@ -1870,12 +2498,16 @@ p, span, div {
   width: 100%;
   height: 400px;
   overflow: hidden;
+  background: var(--eleva-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .screenshot-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: all 0.3s ease;
 }
 
@@ -2015,37 +2647,37 @@ p, span, div {
   .eleva-footer {
     padding: 3rem 0 1.5rem;
   }
-  
+
   .eleva-footer-newsletter {
     padding: 2rem 1.5rem;
     margin-bottom: 3rem;
   }
-  
+
   .newsletter-title {
     font-size: 1.5rem;
   }
-  
+
   .newsletter-form .d-flex {
     flex-direction: column !important;
   }
-  
+
   .newsletter-input {
     margin-bottom: 1rem;
   }
-  
+
   .social-links {
     justify-content: center;
   }
-  
+
   .footer-meta {
     text-align: center !important;
     margin-top: 1rem;
   }
-  
+
   .download-links {
     align-items: center;
   }
-  
+
   .download-btn {
     max-width: 150px;
   }
@@ -2055,13 +2687,13 @@ p, span, div {
   .eleva-footer-newsletter {
     padding: 1.5rem 1rem;
   }
-  
+
   .brand-title {
     font-size: 1.5rem;
     justify-content: center;
     text-align: center;
   }
-  
+
   .brand-description {
     text-align: center;
   }
