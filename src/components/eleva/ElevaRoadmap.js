@@ -15,6 +15,7 @@ function ElevaRoadmap() {
         { name: 'Interface moderna e responsiva', completed: true },
         { name: 'Sistema de conquistas básico', completed: true },
         { name: 'Perfil de usuário', completed: true },
+        { name: 'Sistema de amigos e seguidores', completed: true },
       ],
       highlight: 'Base sólida para toda a experiência gamificada',
     },
@@ -26,7 +27,6 @@ function ElevaRoadmap() {
       progress: 75,
       timeline: 'Q1 2026',
       features: [
-        { name: 'Sistema de amigos e seguidores', completed: true },
         { name: 'Rankings e leaderboards', completed: true },
         { name: 'Torneios semanais básicos', completed: false },
         { name: 'Chat e mensagens', completed: false },

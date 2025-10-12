@@ -9,6 +9,16 @@ function Header() {
     }
   };
 
+  const linkStyle = {
+    color: 'var(--text-light)',
+    cursor: 'pointer',
+    transition: 'color 0.3s ease',
+  };
+
+  const linkHoverStyle = {
+    color: 'var(--accent-cyan)',
+  };
+
   return (
     <Navbar expand="lg" className="header-fixed">
       <Container>
@@ -17,46 +27,44 @@ function Header() {
           className="fw-bold fs-4 text-gradient"
           style={{ cursor: 'pointer' }}
         >
-          JB Studio Developer
+          JB Developer Studio
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link
-              onClick={() => scrollToSection('home')}
-              style={{ color: 'var(--text-light)', cursor: 'pointer' }}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => scrollToSection('sobre')}
-              style={{ color: 'var(--text-light)', cursor: 'pointer' }}
-            >
-              Sobre
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => scrollToSection('empresa')}
-              style={{ color: 'var(--text-light)', cursor: 'pointer' }}
-            >
-              Empresa
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => scrollToSection('projetos')}
-              style={{ color: 'var(--text-light)', cursor: 'pointer' }}
-            >
-              Projetos
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => scrollToSection('contato')}
-              style={{ color: 'var(--text-light)', cursor: 'pointer' }}
-            >
-              Contato
-            </Nav.Link>
+            {[
+              { id: 'home', label: 'Home' },
+              { id: 'sobre', label: 'Sobre' },
+              { id: 'empresa', label: 'Empresa' },
+              { id: 'projetos', label: 'Projetos' },
+              { id: 'contato', label: 'Contato' },
+            ].map((item) => (
+              <Nav.Link
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                style={linkStyle}
+                onMouseEnter={(e) =>
+                  (e.target.style.color = linkHoverStyle.color)
+                }
+                onMouseLeave={(e) => (e.target.style.color = linkStyle.color)}
+              >
+                {item.label}
+              </Nav.Link>
+            ))}
+
             <Nav.Link
               as={Link}
               to="/eleva"
-              style={{ color: 'var(--accent-cyan)', cursor: 'pointer' }}
-              className="fw-bold"
+              style={{
+                color: 'var(--accent-cyan)',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.target.style.color = 'white')}
+              onMouseLeave={(e) =>
+                (e.target.style.color = 'var(--accent-cyan)')
+              }
             >
               ⚡ Eleva
             </Nav.Link>

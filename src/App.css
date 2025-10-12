@@ -25,43 +25,51 @@ body {
   min-height: 100vh;
 }
 
-/* Cores principais - Paleta escura moderna */
 :root {
-  --primary-blue: #1e40af;
-  --primary-purple: #7c3aed;
-  --primary-green: #37bc7d;
-  --accent-blue: #3b82f6;
-  --accent-purple: #a855f7;
-  --accent-cyan: #06b6d4;
-  --accent-pink: #ec4899;
-  --text-light: #f1f5f9;
-  --text-muted: #bccee7;
-  --text-accent: #cbd5e1;
-  --text-dark: #0f172a;
-  --bg-dark: #0f0f23;
-  --bg-card: rgba(30, 27, 75, 0.95);
-  --bg-card-hover: rgba(30, 27, 75, 1);
+  --primary-purple: #8b5cf6; /* lilás neon do gradiente */
+  --primary-blue: #2563eb;   /* azul brilhante do gradiente */
+  --primary-green: #22d3a3;  /* verde aqua neon */
+
+  --accent-purple: #a855f7;  /* lilás claro de apoio */
+  --accent-blue: #3b82f6;    /* azul de apoio */
+  --accent-cyan: #06b6d4;    /* ciano forte */
+  --accent-pink: #ec4899;    /* rosa neon, detalhe opcional */
+
+  --text-light: #f8fafc;     /* quase branco */
+  --text-muted: #cbd5e1;     /* cinza claro */
+  --text-accent: #e2e8f0;    /* cinza azulado */
+  --text-dark: #0f172a;      /* azul bem escuro */
+
+  --bg-dark: #0b0f1a;        /* fundo escuro do logo */
+  --bg-card: rgba(20, 24, 40, 0.95);
+  --bg-card-hover: rgba(20, 24, 40, 1);
   --bg-section: rgba(15, 23, 42, 0.95);
-  --bg-section-alt: rgba(76, 29, 149, 0.15);
+  --bg-section-alt: rgba(88, 28, 135, 0.15);
+
   --border-light: rgba(148, 163, 184, 0.15);
   --border-accent: rgba(59, 130, 246, 0.3);
-  --shadow-primary: rgba(30, 64, 175, 0.3);
-  --shadow-accent: rgba(124, 58, 237, 0.3);
+
+  --shadow-primary: rgba(139, 92, 246, 0.3); /* sombra roxa */
+  --shadow-accent: rgba(34, 211, 163, 0.3);  /* sombra verde aqua */
+
   --gradient-primary: linear-gradient(
     135deg,
-    var(--primary-blue) 0%,
+    var(--primary-purple) 0%,
+    var(--primary-blue) 50%,
     var(--primary-green) 100%
   );
+
   --gradient-accent: linear-gradient(
     135deg,
-    var(--accent-blue) 0%,
+    var(--accent-purple) 0%,
     var(--accent-cyan) 100%
   );
+
   --gradient-rainbow: linear-gradient(
     135deg,
-    var(--primary-blue) 0%,
-    var(--accent-blue) 25%,
-    var(--accent-cyan) 75%,
+    var(--primary-purple) 0%,
+    var(--primary-blue) 33%,
+    var(--accent-cyan) 66%,
     var(--primary-green) 100%
   );
 }
@@ -589,6 +597,18 @@ div {
   }
 }
 
+/* Melhor contraste para textos da seção About */
+.about-text-high-contrast {
+  color: #ffffff !important;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.about-subtitle-contrast {
+  color: #e2e8f0 !important;
+  line-height: 1.7;
+}
+
 /* Project card images */
 .project-card-image {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -670,7 +690,7 @@ div {
   }
 
   .about-image-container {
-    max-width: 350px;
+    max-width: 420px;
   }
 
   .about-image-container:hover {
@@ -703,7 +723,7 @@ div {
   }
 
   .about-image-container {
-    max-width: 300px;
+    max-width: 360px;
     margin-top: 2rem;
   }
 
@@ -760,7 +780,7 @@ div {
   }
 
   .about-image-container {
-    max-width: 280px;
+    max-width: 320px;
     margin-top: 3rem;
   }
 
@@ -833,7 +853,7 @@ div {
   }
 
   .about-image-container {
-    max-width: 220px;
+    max-width: 260px;
     margin-top: 2rem;
   }
 

@@ -63,7 +63,7 @@ function ElevaFeatures() {
     },
     {
       icon: '🎨',
-      title: 'Personalização Completa',
+      title: 'Personalização',
       description:
         'Temas customizáveis, avatares únicos, widgets personalizáveis e interface adaptável.',
       tags: ['Temas', 'Avatares', 'Widgets', 'Interface'],

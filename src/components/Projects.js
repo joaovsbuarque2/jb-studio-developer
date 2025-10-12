@@ -6,6 +6,7 @@ function Projects() {
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Scroll suave para seção específica
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -13,6 +14,7 @@ function Projects() {
     }
   };
 
+  // Lista de projetos
   const projects = [
     {
       id: 'Eleva',
@@ -132,11 +134,13 @@ function Projects() {
     },
   ];
 
+  // Abre modal do projeto selecionado
   const openProjectModal = (project) => {
     setSelectedProject(project);
     setShowModal(true);
   };
 
+  // Etapas do processo
   const processSteps = [
     {
       icon: '🎯',
@@ -172,13 +176,14 @@ function Projects() {
     <>
       <section id="projetos" className="section">
         <Container>
+          {/* Cabeçalho */}
           <Row>
-            <Col lg={10} className="mx-auto">
-              <h1 className="section-title text-center" data-aos="fade-up">
+            <Col lg={10} className="mx-auto text-center">
+              <h1 className="section-title" data-aos="fade-up">
                 Meus Projetos
               </h1>
               <p
-                className="section-subtitle text-center"
+                className="section-subtitle"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -187,7 +192,7 @@ function Projects() {
             </Col>
           </Row>
 
-          {/* Projetos Atuais */}
+          {/* Projetos */}
           <Row className="mb-5">
             {projects.map((project, index) => (
               <Col lg={6} key={index} className="mb-4">
@@ -206,107 +211,90 @@ function Projects() {
                       objectFit: 'cover',
                       borderTopLeftRadius: '24px',
                       borderTopRightRadius: '24px',
-                      width: '100%',
                     }}
                   />
-
                   <Card.Body className="d-flex flex-column">
-                    <div className="mb-3">
-                      <h4 className="h5 mb-2 text-gradient">{project.title}</h4>
-                      <p
-                        style={{ color: 'var(--text-muted)' }}
-                        className="small mb-2"
-                      >
-                        {project.subtitle}
-                      </p>
-                      <span
-                        className="badge"
-                        style={{
-                          background: 'var(--gradient-accent)',
-                          color: 'white',
-                          padding: '8px 16px',
-                          borderRadius: '20px',
-                        }}
-                      >
-                        {project.status}
-                      </span>
-                    </div>
-
+                    <h4 className="h5 text-gradient mb-2">{project.title}</h4>
+                    <p className="small text-muted mb-2">{project.subtitle}</p>
+                    <span
+                      className="badge"
+                      style={{
+                        background: 'var(--gradient-accent)',
+                        color: '#fff',
+                        borderRadius: '20px',
+                        padding: '6px 14px',
+                      }}
+                    >
+                      {project.status}
+                    </span>
                     <p
-                      className="mb-3 flex-grow-1"
+                      className="mt-3 flex-grow-1"
                       style={{ color: 'var(--text-light)' }}
                     >
                       {project.description}
                     </p>
-
-                    <div className="mb-3">
-                      <div className="d-flex flex-wrap gap-2">
-                        {project.tech.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="badge"
-                            style={{
-                              background: 'var(--bg-section)',
-                              color: 'var(--text-light)',
-                              border: '1px solid var(--border-light)',
-                              padding: '6px 12px',
-                              borderRadius: '15px',
-                            }}
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                    <div className="d-flex flex-wrap gap-2 mb-3">
+                      {project.tech.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className="badge"
+                          style={{
+                            background: 'var(--bg-section)',
+                            color: 'var(--text-light)',
+                            border: '1px solid var(--border-light)',
+                            padding: '6px 12px',
+                            borderRadius: '15px',
+                          }}
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
-
                     <Button
                       onClick={() => openProjectModal(project)}
                       className="btn-custom mt-auto"
                     >
-                      Ver detalhes completos
+                      🔍 Ver detalhes
                     </Button>
                   </Card.Body>
                 </Card>
               </Col>
             ))}
 
-            {/* Próximo Projeto */}
+            {/* Card placeholder próximo projeto */}
             <Col lg={6} className="mb-4">
               <Card
                 className="card-custom h-100 border-dashed"
                 data-aos="fade-up"
-                data-aos-delay={400}
+                data-aos-delay="400"
               >
-                <Card.Body className="d-flex flex-column justify-content-center align-items-center text-center">
-                  <div className="mb-3">
-                    <div
-                      className="floating"
-                      style={{
-                        width: '100px',
-                        height: '100px',
-                        background: 'var(--gradient-accent)',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '3rem',
-                      }}
-                    >
-                      💡
-                    </div>
+                <Card.Body className="d-flex flex-column align-items-center justify-content-center text-center">
+                  <div
+                    className="floating mb-3"
+                    style={{
+                      width: '90px',
+                      height: '90px',
+                      background: 'var(--gradient-accent)',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '2.5rem',
+                    }}
+                  >
+                    💡
                   </div>
                   <h5 className="text-gradient">Próximo Projeto</h5>
-                  <p style={{ color: 'var(--text-muted)' }}>
+                  <p className="text-white">
                     Novas ideias estão sempre surgindo. Em breve, mais projetos
-                    incríveis que vão transformar a forma como interagimos com a
-                    tecnologia!
+                    incríveis!
                   </p>
                   <Button
                     onClick={() => scrollToSection('contato')}
                     variant="outline-primary"
                     style={{ borderRadius: '25px' }}
                   >
-                    Sugira uma ideia
+                    🚀 Sugira uma ideia
                   </Button>
                 </Card.Body>
               </Card>
@@ -316,51 +304,45 @@ function Projects() {
           {/* Processo de Desenvolvimento */}
           <Row>
             <Col lg={10} className="mx-auto">
-              <h2
-                className="section-title text-center mb-5"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
+              <h2 className="section-title text-center mb-5" data-aos="fade-up">
                 Processo de Desenvolvimento
               </h2>
               <p
-                className="text-center text-muted mb-5"
+                className="text-center text-white mb-5"
                 data-aos="fade-up"
-                data-aos-delay="600"
+                data-aos-delay="100"
               >
                 Como transformo ideias em produtos digitais de impacto
               </p>
-
               <Row>
-                {processSteps.map((step, index) => (
-                  <Col lg={3} md={6} key={index} className="mb-4">
+                {processSteps.map((step, idx) => (
+                  <Col
+                    lg={3}
+                    md={6}
+                    key={idx}
+                    className="mb-4 text-center"
+                    data-aos="fade-up"
+                    data-aos-delay={200 + idx * 100}
+                  >
                     <div
-                      className="text-center"
-                      data-aos="fade-up"
-                      data-aos-delay={700 + index * 100}
+                      style={{
+                        width: '100px',
+                        height: '100px',
+                        background: step.color,
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '2.2rem',
+                        color: '#fff',
+                        margin: '0 auto 1.5rem',
+                        boxShadow: `0 10px 30px ${step.color}40`,
+                      }}
                     >
-                      <div
-                        style={{
-                          width: '100px',
-                          height: '100px',
-                          background: step.color,
-                          borderRadius: '50%',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '2.5rem',
-                          color: 'white',
-                          margin: '0 auto 1.5rem',
-                          boxShadow: `0 10px 30px ${step.color}40`,
-                        }}
-                      >
-                        {step.icon}
-                      </div>
-                      <h5 className="mb-3 text-gradient">{step.title}</h5>
-                      <p style={{ color: 'var(--text-muted)' }}>
-                        {step.description}
-                      </p>
+                      {step.icon}
                     </div>
+                    <h5 className="text-gradient">{step.title}</h5>
+                    <p className="text-muted">{step.description}</p>
                   </Col>
                 ))}
               </Row>
@@ -369,7 +351,7 @@ function Projects() {
         </Container>
       </section>
 
-      {/* Modal de Projeto */}
+      {/* Modal Detalhes Projeto */}
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
@@ -380,12 +362,11 @@ function Projects() {
           closeButton
           style={{
             background: 'var(--bg-card)',
-            border: 'none',
             borderBottom: '1px solid var(--border-light)',
           }}
         >
           <Modal.Title className="text-gradient">
-            {selectedProject?.title} - Detalhes Completos
+            {selectedProject?.title} - Detalhes
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
@@ -398,111 +379,38 @@ function Projects() {
         >
           {selectedProject && (
             <>
-              <div className="mb-4">
-                <h5 className="text-gradient">🎯 Problema que Resolve</h5>
-                <p className="lead-text">{selectedProject.problem}</p>
-              </div>
+              <h5 className="text-gradient mb-2">🎯 Problema</h5>
+              <p>{selectedProject.problem}</p>
 
-              <div className="mb-4">
-                <h5 className="text-gradient">💡 Nossa Solução</h5>
-                <p className="lead-text">{selectedProject.solution}</p>
-              </div>
+              <h5 className="text-gradient mb-2">💡 Solução</h5>
+              <p>{selectedProject.solution}</p>
 
-              {selectedProject.newFeatures && (
-                <div className="mb-4">
-                  <h5 className="text-gradient">
-                    🚀 Novas Funcionalidades Principais
-                  </h5>
-                  {selectedProject.newFeatures.map((feature, index) => (
-                    <Card key={index} className="card-custom mb-3 p-3">
-                      <Card.Body>
-                        <h6 className="text-gradient-alt">{feature.title}</h6>
-                        <p className="mb-0 small-text">{feature.description}</p>
-                      </Card.Body>
-                    </Card>
-                  ))}
-                </div>
-              )}
+              {/* Novas funcionalidades */}
+              {selectedProject.newFeatures?.map((f, i) => (
+                <Card key={i} className="card-custom mb-3 p-3">
+                  <h6 className="text-gradient-alt">{f.title}</h6>
+                  <p className="small text-white">{f.description}</p>
+                </Card>
+              ))}
 
-              {selectedProject.tournamentModes && (
-                <div className="mb-4">
-                  <h5 className="text-gradient">
-                    🏆 Modos de Torneios Familiares
-                  </h5>
-                  <Row>
-                    {selectedProject.tournamentModes.map((mode, index) => (
-                      <Col md={4} key={index} className="mb-2">
-                        <Card className="card-custom p-2 h-100">
-                          <Card.Body className="text-center">
-                            <h6 className="text-gradient-alt small">
-                              {mode.name}
-                            </h6>
-                            <p className="mb-0 small-text">
-                              {mode.description}
-                            </p>
-                          </Card.Body>
-                        </Card>
-                      </Col>
-                    ))}
-                  </Row>
-                </div>
-              )}
-
-              <div className="mb-4">
-                <h5 className="text-gradient">⚡ Todas as Funcionalidades</h5>
-                <Row>
-                  {selectedProject.features?.map((feature, index) => (
-                    <Col md={6} key={index} className="mb-2">
-                      <div className="d-flex align-items-center">
-                        <span className="text-gradient me-2">•</span>
-                        <span className="small-text">{feature}</span>
-                      </div>
-                    </Col>
-                  ))}
-                </Row>
-              </div>
-
-              {selectedProject.libraries && (
-                <div className="mb-4">
-                  <h5 className="text-gradient">🛠️ Stack Tecnológica</h5>
-                  <ul className="list-unstyled">
-                    {selectedProject.libraries.map((lib, index) => (
-                      <li key={index} className="mb-2">
-                        <span className="text-gradient-alt">▸</span>
-                        <span className="small-text ms-2">{lib}</span>
-                      </li>
+              {/* Roadmap */}
+              <h5 className="text-gradient mt-4 mb-2">🗺️ Roadmap</h5>
+              {selectedProject.roadmap?.map((phase, i) => (
+                <Card key={i} className="card-custom mb-3 p-3">
+                  <h6 className="text-gradient-alt">{phase.phase}</h6>
+                  <ul className="mb-0 text-white">
+                    {phase.items.map((item, idx) => (
+                      <li key={idx}>{item}</li>
                     ))}
                   </ul>
-                </div>
-              )}
-
-              <div className="mb-4">
-                <h5 className="text-gradient">🗺️ Roadmap Detalhado</h5>
-                {selectedProject.roadmap?.map((phase, index) => (
-                  <Card key={index} className="card-custom mb-3 p-3">
-                    <Card.Body>
-                      <h6 className="text-gradient-alt">{phase.phase}</h6>
-                      <Row>
-                        {phase.items.map((item, itemIndex) => (
-                          <Col md={6} key={itemIndex} className="mb-1">
-                            <div className="d-flex align-items-start">
-                              <span className="text-gradient me-2">→</span>
-                              <span className="small-text">{item}</span>
-                            </div>
-                          </Col>
-                        ))}
-                      </Row>
-                    </Card.Body>
-                  </Card>
-                ))}
-              </div>
+                </Card>
+              ))}
             </>
           )}
         </Modal.Body>
         <Modal.Footer
           style={{
             background: 'var(--bg-card)',
-            border: 'none',
             borderTop: '1px solid var(--border-light)',
           }}
         >
@@ -510,7 +418,7 @@ function Projects() {
             onClick={() => scrollToSection('contato')}
             className="btn-custom"
           >
-            Interessado? Entre em contato
+            📩 Interessado? Fale comigo
           </Button>
         </Modal.Footer>
       </Modal>

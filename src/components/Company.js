@@ -6,37 +6,37 @@ function Company() {
       icon: '🚀',
       title: 'Inovação',
       description:
-        'Cada projeto é uma oportunidade de explorar novas tecnologias e abordagens criativas.',
+        'Estamos sempre explorando novas tecnologias para entregar soluções modernas e eficientes.',
     },
     {
       icon: '💡',
       title: 'Transparência',
       description:
-        'Processo aberto, roadmaps claros e comunicação honesta sobre cada etapa dos projetos.',
+        'Mantemos processos claros, comunicação aberta e total alinhamento com nossos parceiros.',
     },
     {
       icon: '🎯',
       title: 'Propósito',
       description:
-        'Todos os projetos nascem com o objetivo de resolver problemas reais e gerar valor para os usuários.',
+        'Cada produto nasce para gerar impacto real e entregar valor sustentável aos usuários.',
     },
     {
-      icon: '🎮',
-      title: 'Gamificação',
+      icon: '🤝',
+      title: 'Colaboração',
       description:
-        'Acredito que a tecnologia deve ser divertida e envolvente, transformando tarefas em experiências.',
+        'Trabalhamos em parceria com nossos clientes, transformando ideias em conquistas conjuntas.',
     },
     {
       icon: '📱',
       title: 'Mobile-First',
       description:
-        'Foco especial em desenvolvimento mobile, criando experiências otimizadas para dispositivos móveis.',
+        'Experiências digitais pensadas para o futuro: responsivas, rápidas e otimizadas para mobile.',
     },
     {
       icon: '🌟',
-      title: 'Experiência',
+      title: 'Excelência',
       description:
-        'UI/UX bem pensada, priorizando sempre a experiência e satisfação do usuário final.',
+        'Buscamos sempre a melhor experiência de uso, unindo design moderno e alto desempenho.',
     },
   ];
 
@@ -45,53 +45,54 @@ function Company() {
       step: '01',
       title: 'Descoberta',
       description:
-        'Identificação de problemas reais e oportunidades de inovação no mercado.',
+        'Analisamos cenários, mapeamos problemas reais e identificamos oportunidades de inovação.',
     },
     {
       step: '02',
-      title: 'Conceituação',
+      title: 'Planejamento',
       description:
-        'Desenvolvimento da ideia central, validação do conceito e definição de objetivos.',
+        'Definição estratégica de metas, funcionalidades e roadmap para cada projeto.',
     },
     {
       step: '03',
       title: 'Prototipagem',
       description:
-        'Criação de protótipos funcionais para testar e refinar a solução proposta.',
+        'Validação ágil com protótipos funcionais, reduzindo riscos e acelerando resultados.',
     },
     {
       step: '04',
       title: 'Desenvolvimento',
       description:
-        'Implementação usando as melhores práticas e tecnologias mais adequadas.',
+        'Construção sólida com tecnologias modernas, aplicando as melhores práticas do mercado.',
     },
     {
       step: '05',
-      title: 'Iteração',
+      title: 'Evolução Contínua',
       description:
-        'Melhoria contínua baseada em feedback real e métricas de usuário.',
+        'Analisamos métricas, coletamos feedback e aprimoramos cada solução de forma iterativa.',
     },
   ];
 
   return (
     <section id="empresa" className="section">
       <Container>
+        {/* Header */}
         <Row>
           <Col lg={10} className="mx-auto">
             <h1 className="section-title text-center" data-aos="fade-up">
-              JB Studio Developer
+              JB Developer Studio
             </h1>
             <p
               className="section-subtitle text-center"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              O armazém de ideias que se transformam em soluções reais
+              Transformando ideias em soluções digitais de impacto
             </p>
           </Col>
         </Row>
 
-        {/* Filosofia Principal */}
+        {/* Filosofia */}
         <Row className="mb-5">
           <Col lg={10} className="mx-auto">
             <Card
@@ -103,48 +104,33 @@ function Company() {
                 <h2 className="h3 mb-4 text-gradient text-center">
                   Nossa Filosofia
                 </h2>
-
                 <p className="fs-5 mb-4" style={{ color: 'var(--text-light)' }}>
                   A{' '}
-                  <strong className="text-gradient">JB Studio Developer</strong>{' '}
-                  não é apenas uma empresa - é o meu "armazém de ideias e
-                  projetos pessoais". Aqui, cada projeto nasce de uma paixão
-                  genuína por resolver problemas reais através da tecnologia.
+                  <strong className="text-gradient">JB Developer Studio</strong>{' '}
+                  nasceu para ser um ambiente de inovação, onde ideias ganham
+                  vida e se transformam em produtos digitais que unem
+                  tecnologia, design e propósito.
                 </p>
-
                 <p className="fs-5 mb-4" style={{ color: 'var(--text-light)' }}>
-                  Funciona como um{' '}
-                  <strong className="text-gradient">portfólio vivo</strong>,
-                  onde cada ideia ganha forma e se transforma em soluções
-                  concretas. Não se trata apenas de desenvolver aplicativos, mas
-                  de criar experiências que façam diferença na vida das pessoas.
+                  Funcionamos como um{' '}
+                  <strong className="text-gradient">hub criativo</strong>,
+                  combinando expertise técnica com visão estratégica. Nosso foco
+                  está em criar soluções escaláveis, intuitivas e centradas no
+                  usuário.
                 </p>
-
-                <p className="fs-5 mb-4" style={{ color: 'var(--text-light)' }}>
-                  Cada projeto que desenvolvo aqui terá sua própria{' '}
-                  <strong className="text-gradient">landing page</strong>
-                  com descrição detalhada, funcionalidades principais e roadmap
-                  de evolução. É uma vitrine transparente do meu trabalho e do
-                  meu processo criativo.
-                </p>
-
                 <p
                   className="fs-5 text-center"
                   style={{ color: 'var(--text-light)' }}
                 >
-                  O objetivo é manter um visual{' '}
-                  <strong className="text-gradient">
-                    limpo e institucional
-                  </strong>
-                  , como se fosse uma vitrine digital onde cada projeto tem seu
-                  espaço para brilhar e contar sua própria história.
+                  Mais do que software, criamos experiências digitais que
+                  fortalecem negócios e conectam pessoas.
                 </p>
               </Card.Body>
             </Card>
           </Col>
         </Row>
 
-        {/* Nossos Valores */}
+        {/* Valores */}
         <Row className="mb-5">
           <Col lg={12}>
             <h2
@@ -154,7 +140,6 @@ function Company() {
             >
               Nossos Valores
             </h2>
-
             <Row>
               {values.map((value, index) => (
                 <Col lg={4} md={6} key={index} className="mb-4">
@@ -188,13 +173,12 @@ function Company() {
               Nossa Metodologia
             </h2>
             <p
-              className="text-center text-muted mb-5"
+              className="text-center text-white mb-5"
               data-aos="fade-up"
               data-aos-delay="900"
             >
-              Como transformamos ideias em produtos digitais de impacto
+              Como conduzimos projetos digitais do conceito à entrega
             </p>
-
             <Row>
               {methodology.map((item, index) => (
                 <Col lg={12} key={index} className="mb-4">
@@ -255,9 +239,9 @@ function Company() {
               <Card.Body className="text-center">
                 <h3 className="mb-4 text-gradient">🌟 Nossa Missão</h3>
                 <p className="fs-4 mb-0" style={{ color: 'var(--text-light)' }}>
-                  Criar soluções tecnológicas que não apenas resolvem problemas,
-                  mas também inspiram, divertem e conectam pessoas através da
-                  inovação digital.
+                  Desenvolver soluções digitais que unem inovação, usabilidade e
+                  impacto real — ajudando pessoas e empresas a crescer no mundo
+                  conectado.
                 </p>
               </Card.Body>
             </Card>
