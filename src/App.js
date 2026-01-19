@@ -7,13 +7,14 @@ import './App.css';
 
 import JSStudioApp from './pages/JSStudioApp';
 import ElevaApp from './pages/ElevaApp';
+import VeloApp from './pages/VeloApp';
 
 function App() {
   useEffect(() => {
     AOS.init({
       duration: 800,
       once: true,
-      offset: 100
+      offset: 100,
     });
   }, []);
 
@@ -25,6 +26,8 @@ function App() {
           <Route path="/js-studio" element={<JSStudioApp />} />
           <Route path="/eleva" element={<ElevaApp />} />
           <Route path="/eleva/*" element={<ElevaApp />} />
+          <Route path="/velo" element={<VeloApp />} />
+          <Route path="/velo/*" element={<VeloApp />} />
         </Routes>
       </div>
     </Router>

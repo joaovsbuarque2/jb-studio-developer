@@ -68,6 +68,23 @@ function Header() {
             >
               ⚡ Eleva
             </Nav.Link>
+
+            <Nav.Link
+              as={Link}
+              to="/velo"
+              style={{
+                color: 'var(--accent-cyan)',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.target.style.color = 'white')}
+              onMouseLeave={(e) =>
+                (e.target.style.color = 'var(--accent-cyan)')
+              }
+            >
+              📱 Velo
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

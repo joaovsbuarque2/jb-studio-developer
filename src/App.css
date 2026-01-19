@@ -27,20 +27,20 @@ body {
 
 :root {
   --primary-purple: #8b5cf6; /* lilás neon do gradiente */
-  --primary-blue: #2563eb;   /* azul brilhante do gradiente */
-  --primary-green: #22d3a3;  /* verde aqua neon */
+  --primary-blue: #2563eb; /* azul brilhante do gradiente */
+  --primary-green: #22d3a3; /* verde aqua neon */
 
-  --accent-purple: #a855f7;  /* lilás claro de apoio */
-  --accent-blue: #3b82f6;    /* azul de apoio */
-  --accent-cyan: #06b6d4;    /* ciano forte */
-  --accent-pink: #ec4899;    /* rosa neon, detalhe opcional */
+  --accent-purple: #a855f7; /* lilás claro de apoio */
+  --accent-blue: #3b82f6; /* azul de apoio */
+  --accent-cyan: #06b6d4; /* ciano forte */
+  --accent-pink: #ec4899; /* rosa neon, detalhe opcional */
 
-  --text-light: #f8fafc;     /* quase branco */
-  --text-muted: #cbd5e1;     /* cinza claro */
-  --text-accent: #e2e8f0;    /* cinza azulado */
-  --text-dark: #0f172a;      /* azul bem escuro */
+  --text-light: #f8fafc; /* quase branco */
+  --text-muted: #cbd5e1; /* cinza claro */
+  --text-accent: #e2e8f0; /* cinza azulado */
+  --text-dark: #0f172a; /* azul bem escuro */
 
-  --bg-dark: #0b0f1a;        /* fundo escuro do logo */
+  --bg-dark: #0b0f1a; /* fundo escuro do logo */
   --bg-card: rgba(20, 24, 40, 0.95);
   --bg-card-hover: rgba(20, 24, 40, 1);
   --bg-section: rgba(15, 23, 42, 0.95);
@@ -50,7 +50,7 @@ body {
   --border-accent: rgba(59, 130, 246, 0.3);
 
   --shadow-primary: rgba(139, 92, 246, 0.3); /* sombra roxa */
-  --shadow-accent: rgba(34, 211, 163, 0.3);  /* sombra verde aqua */
+  --shadow-accent: rgba(34, 211, 163, 0.3); /* sombra verde aqua */
 
   --gradient-primary: linear-gradient(
     135deg,
@@ -2536,6 +2536,759 @@ div {
   font-weight: 700;
   color: var(--text);
   margin-bottom: 1rem;
+}
+
+/* ========================================
+   VELO STYLES - PIX Recorrente
+   ======================================== */
+
+.velo-app {
+  /* Cores da aplicação Velo */
+  --velo-background: #000000;
+  --velo-surface: #1a1a1a;
+  --velo-surface-variant: #2a2a2a;
+  --velo-surface-disabled: rgba(255, 255, 255, 0.08);
+  --velo-outline: #404040;
+  --velo-outline-variant: #333333;
+  --velo-primary: #ffffff;
+  --velo-primary-light: #f5f5f5;
+  --velo-primary-dark: #cccccc;
+  --velo-primary-container: #333333;
+  --velo-secondary: #b0b0b0;
+  --velo-secondary-light: #d1d1d1;
+  --velo-secondary-dark: #8f8f8f;
+  --velo-secondary-container: #404040;
+  --velo-on-secondary: #000000;
+  --velo-accent: #00d4aa;
+  --velo-accent-light: #26e6b8;
+  --velo-accent-dark: #00a085;
+  --velo-success: #00d4aa;
+  --velo-warning: #ffcc00;
+  --velo-error: #ff4444;
+  --velo-info: #00aaff;
+  --velo-disabled: rgba(255, 255, 255, 0.4);
+  --velo-text: #ffffff;
+  --velo-text-secondary: #b0b0b0;
+  --velo-text-on-primary: #000000;
+  --velo-text-on-secondary: #000000;
+  --velo-text-on-accent: #000000;
+  --velo-text-disabled: rgba(255, 255, 255, 0.4);
+
+  /* Gradientes específicos do Velo */
+  --velo-gradient-primary: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+  --velo-gradient-secondary: linear-gradient(135deg, #b0b0b0 0%, #808080 100%);
+  --velo-gradient-accent: linear-gradient(135deg, #00d4aa 0%, #00a085 100%);
+  --velo-gradient-background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+
+  /* Sombras específicas do Velo */
+  --velo-shadow-sm: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
+  --velo-shadow:
+    0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06);
+  --velo-shadow-md:
+    0 4px 6px -1px rgba(255, 255, 255, 0.1),
+    0 2px 4px -1px rgba(255, 255, 255, 0.06);
+  --velo-shadow-lg:
+    0 10px 15px -3px rgba(255, 255, 255, 0.1),
+    0 4px 6px -2px rgba(255, 255, 255, 0.05);
+  --velo-shadow-xl:
+    0 20px 25px -5px rgba(255, 255, 255, 0.1),
+    0 10px 10px -5px rgba(255, 255, 255, 0.04);
+
+  /* Fontes específicas do Velo */
+  --velo-font-family: 'Poppins', sans-serif;
+  --velo-font-size-xs: 0.75rem;
+  --velo-font-size-sm: 0.875rem;
+  --velo-font-size-base: 1rem;
+  --velo-font-size-lg: 1.125rem;
+  --velo-font-size-xl: 1.25rem;
+  --velo-font-size-2xl: 1.5rem;
+  --velo-font-size-3xl: 1.875rem;
+  --velo-font-size-4xl: 2.25rem;
+  --velo-font-size-5xl: 3rem;
+
+  background: var(--velo-gradient-background);
+  color: var(--velo-text);
+  min-height: 100vh;
+  font-family: var(--velo-font-family);
+}
+
+/* Header específico do Velo */
+.velo-navbar {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--velo-outline);
+  box-shadow: var(--velo-shadow);
+}
+
+.velo-brand-logo {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.velo-brand-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.velo-brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--velo-primary);
+  line-height: 1;
+}
+
+.velo-brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--velo-secondary);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+/* Hero Section do Velo */
+.velo-hero {
+  background: var(--velo-gradient-background);
+  padding: 8rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.velo-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.velo-hero-title {
+  font-size: var(--velo-font-size-5xl);
+  font-weight: 700;
+  color: var(--velo-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.velo-hero-subtitle {
+  font-size: var(--velo-font-size-xl);
+  color: var(--velo-text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.velo-badge {
+  display: inline-block;
+  background: var(--velo-gradient-accent);
+  color: var(--velo-text-on-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: var(--velo-font-size-sm);
+  margin-bottom: 2rem;
+  box-shadow: var(--velo-shadow);
+}
+
+.btn-velo-primary {
+  background: var(--velo-gradient-primary);
+  border: none;
+  color: var(--velo-text-on-primary);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--velo-shadow);
+}
+
+.btn-velo-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--velo-shadow-lg);
+  background: var(--velo-gradient-secondary);
+}
+
+.hero-stats {
+  margin-top: 3rem;
+}
+
+.stat-item {
+  background: var(--velo-surface);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--velo-outline);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--velo-shadow-lg);
+  border-color: var(--velo-accent);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-number {
+  font-size: var(--velo-font-size-2xl);
+  font-weight: 700;
+  color: var(--velo-primary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: var(--velo-font-size-sm);
+  color: var(--velo-text-secondary);
+}
+
+.velo-phone-mockup {
+  position: relative;
+}
+
+.phone-frame {
+  width: 300px;
+  height: 600px;
+  background: var(--velo-surface);
+  border-radius: 30px;
+  border: 8px solid var(--velo-outline);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--velo-shadow-xl);
+}
+
+.app-screenshot-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--velo-surface-variant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--velo-text-secondary);
+}
+
+.placeholder-content span {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.placeholder-content p {
+  font-size: var(--velo-font-size-sm);
+  text-align: center;
+}
+
+/* Seções do Velo */
+.velo-section {
+  padding: 6rem 0;
+  background: var(--velo-background);
+  position: relative;
+}
+
+.velo-section:nth-child(even) {
+  background: var(--velo-surface);
+}
+
+.velo-section-title {
+  font-size: var(--velo-font-size-4xl);
+  font-weight: 700;
+  color: var(--velo-text);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.velo-section-subtitle {
+  font-size: var(--velo-font-size-lg);
+  color: var(--velo-text-secondary);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Cards do Velo */
+.velo-feature-card,
+.velo-benefit-card,
+.metric-card,
+.contact-card,
+.faq-card,
+.team-card,
+.service-card,
+.tech-card {
+  background: var(--velo-surface);
+  border: 1px solid var(--velo-outline);
+  border-radius: 15px;
+  color: var(--velo-text);
+  transition: all 0.3s ease;
+  box-shadow: var(--velo-shadow);
+}
+
+.velo-feature-card:hover,
+.velo-benefit-card:hover,
+.metric-card:hover,
+.contact-card:hover,
+.faq-card:hover,
+.team-card:hover,
+.service-card:hover,
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--velo-shadow-lg);
+  border-color: var(--velo-accent);
+}
+
+.feature-icon,
+.benefit-icon,
+.metric-icon,
+.contact-icon {
+  font-size: 2.5rem;
+}
+
+.feature-title,
+.benefit-title,
+.metric-value,
+.contact-title,
+.team-name,
+.service-name,
+.tech-name {
+  font-size: var(--velo-font-size-lg);
+  font-weight: 600;
+  color: var(--velo-text);
+  margin-bottom: 0.5rem;
+}
+
+.feature-description,
+.benefit-description,
+.metric-label,
+.contact-link,
+.team-description,
+.service-description,
+.tech-use {
+  color: var(--velo-text-secondary);
+  line-height: 1.6;
+}
+
+/* CTA Section do Velo */
+.velo-cta-section {
+  background: var(--velo-gradient-accent);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.velo-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.cta-title {
+  font-size: var(--velo-font-size-4xl);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+  font-size: var(--velo-font-size-lg);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Footer específico do Velo */
+.velo-footer {
+  background: var(--velo-background);
+  color: var(--velo-text);
+  padding: 4rem 0 2rem;
+  margin-top: auto;
+  border-top: 1px solid var(--velo-outline);
+  position: relative;
+}
+
+.velo-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--velo-gradient-primary);
+}
+
+.velo-footer-newsletter {
+  background: var(--velo-surface);
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  margin-bottom: 4rem;
+  border: 1px solid var(--velo-outline);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.velo-footer-newsletter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--velo-gradient-accent);
+}
+
+/* Roadmap Timeline */
+.roadmap-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.roadmap-phase {
+  position: relative;
+  margin-bottom: 4rem;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.roadmap-phase.completed {
+  opacity: 1;
+}
+
+.roadmap-phase.completed .phase-icon {
+  box-shadow: 0 0 20px rgba(0, 212, 170, 0.3);
+}
+
+.roadmap-phase.in_progress {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.roadmap-phase.in_progress .phase-icon {
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+  }
+}
+
+.roadmap-phase:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.timeline-connector {
+  position: absolute;
+  left: 60px;
+  top: 120px;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    var(--velo-accent) 0%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.phase-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+}
+
+.phase-icon-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.phase-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--velo-shadow-xl);
+  border: 4px solid var(--velo-surface);
+  transition: all 0.3s ease;
+}
+
+.phase-icon:hover {
+  transform: scale(1.1);
+}
+
+.icon-emoji {
+  font-size: 3rem;
+  filter: brightness(0) invert(1);
+}
+
+.phase-status-indicator {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--velo-surface);
+  border: 3px solid var(--velo-outline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.status-completed {
+  color: var(--velo-success);
+}
+
+.status-progress {
+  color: var(--velo-warning);
+  animation: spin 2s linear infinite;
+}
+
+.status-planned {
+  color: var(--velo-text-secondary);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.phase-details {
+  flex: 1;
+  background: var(--velo-surface);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid var(--velo-outline);
+  box-shadow: var(--velo-shadow);
+  transition: all 0.3s ease;
+}
+
+.roadmap-phase:hover .phase-details {
+  box-shadow: var(--velo-shadow-lg);
+  border-color: var(--velo-accent);
+}
+
+.phase-header-info {
+  margin-bottom: 2rem;
+}
+
+.phase-title {
+  font-size: var(--velo-font-size-2xl);
+  font-weight: 700;
+  color: var(--velo-text);
+  margin-bottom: 0.5rem;
+}
+
+.phase-description {
+  font-size: var(--velo-font-size-base);
+  color: var(--velo-text-secondary);
+  font-style: italic;
+}
+
+.phase-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.phase-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--velo-surface-variant);
+  border-radius: 8px;
+  border: 1px solid var(--velo-outline-variant);
+  transition: all 0.3s ease;
+}
+
+.phase-item:hover {
+  background: var(--velo-surface);
+  transform: translateX(5px);
+}
+
+.item-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--velo-accent);
+  flex-shrink: 0;
+}
+
+.item-text {
+  font-size: var(--velo-font-size-sm);
+  color: var(--velo-text-secondary);
+  line-height: 1.4;
+}
+
+/* KPI Cards */
+.kpi-card {
+  background: var(--velo-surface);
+  border: 1px solid var(--velo-outline);
+  border-radius: 15px;
+  box-shadow: var(--velo-shadow);
+  transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--velo-shadow-lg);
+  border-color: var(--velo-accent);
+}
+
+.kpi-category {
+  font-size: var(--velo-font-size-lg);
+  font-weight: 600;
+  color: var(--velo-text);
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 1px solid var(--velo-outline);
+  background: var(--velo-surface-variant);
+}
+
+.kpi-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.kpi-list li {
+  padding: 0.5rem 0;
+  color: var(--velo-text-secondary);
+  border-bottom: 1px solid var(--velo-outline-variant);
+  font-size: var(--velo-font-size-sm);
+}
+
+.kpi-list li:last-child {
+  border-bottom: none;
+}
+
+/* Responsividade do Velo */
+@media (max-width: 768px) {
+  .velo-hero-title {
+    font-size: var(--velo-font-size-4xl);
+  }
+
+  .velo-section-title {
+    font-size: var(--velo-font-size-3xl);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-frame {
+    width: 250px;
+    height: 500px;
+  }
+
+  .roadmap-timeline {
+    margin: 0 1rem;
+  }
+
+  .phase-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .phase-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-emoji {
+    font-size: 2rem;
+  }
+
+  .phase-status-indicator {
+    width: 30px;
+    height: 30px;
+    top: -3px;
+    right: -3px;
+    font-size: 1rem;
+  }
+
+  .timeline-connector {
+    display: none; /* Hide timeline connector on mobile */
+  }
+
+  .phase-items {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .phase-item {
+    padding: 0.5rem;
+  }
+
+  .phase-item:hover {
+    transform: none;
+  }
+
+  .phase-title {
+    font-size: var(--velo-font-size-xl);
+  }
+
+  .phase-description {
+    font-size: var(--velo-font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .phase-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-emoji {
+    font-size: 1.8rem;
+  }
+
+  .phase-details {
+    padding: 1.5rem;
+  }
+
+  .phase-items {
+    gap: 0.25rem;
+  }
+
+  .phase-item {
+    padding: 0.4rem;
+  }
 }
 
 .newsletter-subtitle {

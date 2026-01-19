@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Form,
+  Button,
+  Alert,
+} from 'react-bootstrap';
 
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
   const [showAlert, setShowAlert] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -31,7 +39,8 @@ function Contact() {
             <Col lg={8} className="mx-auto text-center">
               <h1 className="section-title">Vamos Conversar?</h1>
               <p className="section-subtitle">
-                Entre em contato para trocar ideias, colaborar em projetos ou apenas bater um papo sobre tecnologia
+                Entre em contato para trocar ideias, colaborar em projetos ou
+                apenas bater um papo sobre tecnologia
               </p>
             </Col>
           </Row>
@@ -44,10 +53,11 @@ function Contact() {
             <Col lg={8} className="mx-auto">
               {showAlert && (
                 <Alert variant="success" className="text-center">
-                  <strong>Mensagem enviada com sucesso!</strong> Obrigado pelo contato, retornarei em breve.
+                  <strong>Mensagem enviada com sucesso!</strong> Obrigado pelo
+                  contato, retornarei em breve.
                 </Alert>
               )}
-              
+
               <Card className="card-custom p-4">
                 <Card.Body>
                   <Form onSubmit={handleSubmit}>
@@ -66,7 +76,7 @@ function Contact() {
                           />
                         </Form.Group>
                       </Col>
-                      
+
                       <Col md={6} className="mb-3">
                         <Form.Group>
                           <Form.Label>E-mail</Form.Label>
@@ -82,7 +92,7 @@ function Contact() {
                         </Form.Group>
                       </Col>
                     </Row>
-                    
+
                     <Form.Group className="mb-4">
                       <Form.Label>Mensagem</Form.Label>
                       <Form.Control
@@ -96,13 +106,9 @@ function Contact() {
                         style={{ borderRadius: '10px', padding: '12px' }}
                       />
                     </Form.Group>
-                    
+
                     <div className="text-center">
-                      <Button 
-                        type="submit" 
-                        className="btn-custom" 
-                        size="lg"
-                      >
+                      <Button type="submit" className="btn-custom" size="lg">
                         Enviar Mensagem
                       </Button>
                     </div>
@@ -118,14 +124,16 @@ function Contact() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto">
-              <h2 className="section-title text-center mb-5">Outras Formas de Contato</h2>
-              
+              <h2 className="section-title text-center mb-5">
+                Outras Formas de Contato
+              </h2>
+
               <Row>
                 <Col md={6} className="mb-4">
                   <Card className="card-custom h-100 text-center p-4">
                     <Card.Body>
                       <div className="mb-3">
-                        <div 
+                        <div
                           style={{
                             width: '80px',
                             height: '80px',
@@ -136,7 +144,7 @@ function Contact() {
                             justifyContent: 'center',
                             fontSize: '2rem',
                             color: 'white',
-                            margin: '0 auto'
+                            margin: '0 auto',
                           }}
                         >
                           💼
@@ -144,9 +152,10 @@ function Contact() {
                       </div>
                       <h5 className="mb-3">LinkedIn</h5>
                       <p className="text-muted mb-3">
-                        Conecte-se comigo profissionalmente e acompanhe minha jornada
+                        Conecte-se comigo profissionalmente e acompanhe minha
+                        jornada
                       </p>
-                      <Button 
+                      <Button
                         variant="outline-primary"
                         href="#"
                         target="_blank"
@@ -158,12 +167,12 @@ function Contact() {
                     </Card.Body>
                   </Card>
                 </Col>
-                
+
                 <Col md={6} className="mb-4">
                   <Card className="card-custom h-100 text-center p-4">
                     <Card.Body>
                       <div className="mb-3">
-                        <div 
+                        <div
                           style={{
                             width: '80px',
                             height: '80px',
@@ -174,7 +183,7 @@ function Contact() {
                             justifyContent: 'center',
                             fontSize: '2rem',
                             color: 'white',
-                            margin: '0 auto'
+                            margin: '0 auto',
                           }}
                         >
                           💻
@@ -182,9 +191,10 @@ function Contact() {
                       </div>
                       <h5 className="mb-3">GitHub</h5>
                       <p className="text-muted mb-3">
-                        Veja meus códigos e contribua com os projetos open source
+                        Veja meus códigos e contribua com os projetos open
+                        source
                       </p>
-                      <Button 
+                      <Button
                         variant="outline-dark"
                         href="#"
                         target="_blank"
@@ -210,8 +220,9 @@ function Contact() {
                 <Card.Body>
                   <h3 className="mb-4">🚀 Vamos criar algo incrível juntos!</h3>
                   <p className="fs-5 text-muted">
-                    Sempre aberto a novas oportunidades, colaborações e conversas interessantes. 
-                    Se você tem uma ideia ou projeto em mente, adoraria ouvir sobre ele!
+                    Sempre aberto a novas oportunidades, colaborações e
+                    conversas interessantes. Se você tem uma ideia ou projeto em
+                    mente, adoraria ouvir sobre ele!
                   </p>
                 </Card.Body>
               </Card>

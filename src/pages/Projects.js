@@ -8,11 +8,12 @@ function Projects() {
       id: 'eleva',
       title: 'Eleva',
       subtitle: 'Produtividade que evolui com você',
-      description: 'App mobile gamificado em React Native que transforma tarefas em missões épicas com XP, torneios e desafios sociais.',
+      description:
+        'App mobile gamificado em React Native que transforma tarefas em missões épicas com XP, torneios e desafios sociais.',
       status: 'Em desenvolvimento',
       tech: ['React Native', 'Expo', 'Gamificação'],
-      link: '/projetos/eleva'
-    }
+      link: '/projetos/eleva',
+    },
   ];
 
   return (
@@ -36,7 +37,7 @@ function Projects() {
             {projects.map((project, index) => (
               <Col lg={6} xl={4} key={index} className="mb-4">
                 <Card className="card-custom h-100">
-                  <div 
+                  <div
                     style={{
                       height: '200px',
                       backgroundColor: '#f8f9fa',
@@ -46,35 +47,35 @@ function Projects() {
                       alignItems: 'center',
                       justifyContent: 'center',
                       fontSize: '1rem',
-                      color: '#6c757d'
+                      color: '#6c757d',
                     }}
                   >
                     Imagem do {project.title}
                   </div>
-                  
+
                   <Card.Body className="d-flex flex-column">
                     <div className="mb-3">
                       <h4 className="h5 mb-2">{project.title}</h4>
-                      <p className="text-muted small mb-2">{project.subtitle}</p>
-                      <span 
+                      <p className="text-muted small mb-2">
+                        {project.subtitle}
+                      </p>
+                      <span
                         className="badge"
                         style={{
                           backgroundColor: 'var(--primary-blue)',
-                          color: 'white'
+                          color: 'white',
                         }}
                       >
                         {project.status}
                       </span>
                     </div>
-                    
-                    <p className="mb-3 flex-grow-1">
-                      {project.description}
-                    </p>
-                    
+
+                    <p className="mb-3 flex-grow-1">{project.description}</p>
+
                     <div className="mb-3">
                       <div className="d-flex flex-wrap gap-2">
                         {project.tech.map((tech, techIndex) => (
-                          <span 
+                          <span
                             key={techIndex}
                             className="badge bg-light text-dark border"
                           >
@@ -83,9 +84,9 @@ function Projects() {
                         ))}
                       </div>
                     </div>
-                    
-                    <Button 
-                      as={Link} 
+
+                    <Button
+                      as={Link}
                       to={project.link}
                       className="btn-custom mt-auto"
                     >
@@ -95,12 +96,12 @@ function Projects() {
                 </Card>
               </Col>
             ))}
-            
+
             <Col lg={6} xl={4} className="mb-4">
               <Card className="card-custom h-100 border-dashed">
                 <Card.Body className="d-flex flex-column justify-content-center align-items-center text-center">
                   <div className="mb-3">
-                    <div 
+                    <div
                       style={{
                         width: '80px',
                         height: '80px',
@@ -110,7 +111,7 @@ function Projects() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         fontSize: '2rem',
-                        color: 'var(--text-light)'
+                        color: 'var(--text-light)',
                       }}
                     >
                       💡
@@ -118,8 +119,8 @@ function Projects() {
                   </div>
                   <h5>Próximo Projeto</h5>
                   <p className="text-muted">
-                    Novas ideias estão sempre surgindo. 
-                    Em breve, mais projetos incríveis!
+                    Novas ideias estão sempre surgindo. Em breve, mais projetos
+                    incríveis!
                   </p>
                 </Card.Body>
               </Card>
@@ -133,11 +134,11 @@ function Projects() {
           <Row>
             <Col lg={8} className="mx-auto text-center">
               <h2 className="section-title">Processo de Desenvolvimento</h2>
-              
+
               <Row className="mt-5">
                 <Col md={4} className="mb-4">
                   <div className="text-center">
-                    <div 
+                    <div
                       style={{
                         width: '80px',
                         height: '80px',
@@ -148,21 +149,22 @@ function Projects() {
                         justifyContent: 'center',
                         fontSize: '2rem',
                         color: 'white',
-                        margin: '0 auto 1rem'
+                        margin: '0 auto 1rem',
                       }}
                     >
                       🎯
                     </div>
                     <h5>Identificação</h5>
                     <p className="text-muted">
-                      Todo projeto nasce de um problema real que precisa ser resolvido.
+                      Todo projeto nasce de um problema real que precisa ser
+                      resolvido.
                     </p>
                   </div>
                 </Col>
-                
+
                 <Col md={4} className="mb-4">
                   <div className="text-center">
-                    <div 
+                    <div
                       style={{
                         width: '80px',
                         height: '80px',
@@ -173,21 +175,22 @@ function Projects() {
                         justifyContent: 'center',
                         fontSize: '2rem',
                         color: 'white',
-                        margin: '0 auto 1rem'
+                        margin: '0 auto 1rem',
                       }}
                     >
                       🚀
                     </div>
                     <h5>Desenvolvimento</h5>
                     <p className="text-muted">
-                      Criação com foco na experiência do usuário e nas melhores práticas.
+                      Criação com foco na experiência do usuário e nas melhores
+                      práticas.
                     </p>
                   </div>
                 </Col>
-                
+
                 <Col md={4} className="mb-4">
                   <div className="text-center">
-                    <div 
+                    <div
                       style={{
                         width: '80px',
                         height: '80px',
@@ -198,14 +201,15 @@ function Projects() {
                         justifyContent: 'center',
                         fontSize: '2rem',
                         color: 'white',
-                        margin: '0 auto 1rem'
+                        margin: '0 auto 1rem',
                       }}
                     >
                       📈
                     </div>
                     <h5>Evolução</h5>
                     <p className="text-muted">
-                      Melhoria contínua baseada no feedback e novas necessidades.
+                      Melhoria contínua baseada no feedback e novas
+                      necessidades.
                     </p>
                   </div>
                 </Col>

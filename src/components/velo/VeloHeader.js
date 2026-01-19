@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 // Importar logo
 import logoJB from '../../assets/images/logo-jb.png';
 
-function ElevaHeader() {
+function VeloHeader() {
   const [expanded, setExpanded] = useState(false);
 
   const scrollToSection = (sectionId) => {
@@ -19,7 +19,7 @@ function ElevaHeader() {
   const handleDownloadClick = () => {
     // Simula ação de download ou redirecionamento para stores
     alert(
-      'Em breve nas lojas de aplicativos! 🚀\n\nCadastre-se em nossa newsletter para ser notificado quando o app estiver disponível.',
+      'PIX Recorrente está em desenvolvimento! 📱\n\nCadastre-se em nossa newsletter para ser notificado quando o app estiver disponível.',
     );
     setExpanded(false);
   };
@@ -28,30 +28,30 @@ function ElevaHeader() {
     <Navbar
       expand="lg"
       fixed="top"
-      className="navbar-custom eleva-navbar"
+      className="navbar-custom velo-navbar"
       expanded={expanded}
       onToggle={setExpanded}
     >
       <Container>
         <Navbar.Brand
           as={Link}
-          to="/eleva"
-          className="brand-eleva"
+          to="/velo"
+          className="brand-velo"
           onClick={() => scrollToSection('home')}
         >
-          <img src={logoJB} alt="JB Studio" className="eleva-brand-logo" />
-          <div className="eleva-brand-text">
-            <span className="eleva-brand-name">ELEVA</span>
-            <span className="eleva-brand-subtitle">by JB Studio</span>
+          <img src={logoJB} alt="JB Studio" className="velo-brand-logo" />
+          <div className="velo-brand-text">
+            <span className="velo-brand-name">VELO</span>
+            <span className="velo-brand-subtitle">PIX Recorrente</span>
           </div>
         </Navbar.Brand>
 
         <Navbar.Toggle
-          aria-controls="eleva-navbar-nav"
+          aria-controls="velo-navbar-nav"
           onClick={() => setExpanded(!expanded)}
         />
 
-        <Navbar.Collapse id="eleva-navbar-nav">
+        <Navbar.Collapse id="velo-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link onClick={() => scrollToSection('home')}>Início</Nav.Link>
             <Nav.Link onClick={() => scrollToSection('sobre')}>Sobre</Nav.Link>
@@ -78,11 +78,11 @@ function ElevaHeader() {
               ← JS Studio
             </Button>
             <Button
-              className="btn-eleva-cta"
+              className="btn-velo-cta"
               size="sm"
               onClick={handleDownloadClick}
             >
-              🚀 Baixar App
+              📱 Baixar App
             </Button>
           </Nav>
         </Navbar.Collapse>
@@ -91,4 +91,4 @@ function ElevaHeader() {
   );
 }
 
-export default ElevaHeader;
+export default VeloHeader;
