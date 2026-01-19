@@ -1,9 +1,18 @@
-import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Projects() {
   const projects = [
+    {
+      id: 'velo',
+      title: 'Velo',
+      subtitle: 'PIX Recorrente',
+      description:
+        'Plataforma de pagamentos recorrentes via PIX, facilitando transações automáticas e seguras.',
+      status: 'Em desenvolvimento',
+      tech: ['React', 'Node.js', 'PIX'],
+      link: '/velo',
+    },
     {
       id: 'eleva',
       title: 'Eleva',
@@ -33,98 +42,19 @@ function Projects() {
 
       <section className="section-alt section">
         <Container>
-          <Row>
+          <Row className="justify-content-center">
             {projects.map((project, index) => (
-              <Col lg={6} xl={4} key={index} className="mb-4">
-                <Card className="card-custom h-100">
-                  <div
-                    style={{
-                      height: '200px',
-                      backgroundColor: '#f8f9fa',
-                      border: '2px dashed #dee2e6',
-                      borderRadius: '15px 15px 0 0',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '1rem',
-                      color: '#6c757d',
-                    }}
-                  >
-                    Imagem do {project.title}
-                  </div>
-
-                  <Card.Body className="d-flex flex-column">
-                    <div className="mb-3">
-                      <h4 className="h5 mb-2">{project.title}</h4>
-                      <p className="text-muted small mb-2">
-                        {project.subtitle}
-                      </p>
-                      <span
-                        className="badge"
-                        style={{
-                          backgroundColor: 'var(--primary-blue)',
-                          color: 'white',
-                        }}
-                      >
-                        {project.status}
-                      </span>
-                    </div>
-
-                    <p className="mb-3 flex-grow-1">{project.description}</p>
-
-                    <div className="mb-3">
-                      <div className="d-flex flex-wrap gap-2">
-                        {project.tech.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="badge bg-light text-dark border"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <Button
-                      as={Link}
-                      to={project.link}
-                      className="btn-custom mt-auto"
-                    >
-                      Ver mais
-                    </Button>
-                  </Card.Body>
-                </Card>
+              <Col md={4} key={index} className="mb-4 text-center">
+                <Button
+                  as={Link}
+                  to={project.link}
+                  className="btn-custom btn-lg"
+                  style={{ minWidth: '200px' }}
+                >
+                  {project.title}
+                </Button>
               </Col>
             ))}
-
-            <Col lg={6} xl={4} className="mb-4">
-              <Card className="card-custom h-100 border-dashed">
-                <Card.Body className="d-flex flex-column justify-content-center align-items-center text-center">
-                  <div className="mb-3">
-                    <div
-                      style={{
-                        width: '80px',
-                        height: '80px',
-                        backgroundColor: 'var(--bg-light)',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '2rem',
-                        color: 'var(--text-light)',
-                      }}
-                    >
-                      💡
-                    </div>
-                  </div>
-                  <h5>Próximo Projeto</h5>
-                  <p className="text-muted">
-                    Novas ideias estão sempre surgindo. Em breve, mais projetos
-                    incríveis!
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
           </Row>
         </Container>
       </section>
@@ -194,7 +124,7 @@ function Projects() {
                       style={{
                         width: '80px',
                         height: '80px',
-                        backgroundColor: 'var(--text-dark)',
+                        backgroundColor: '#28a745',
                         borderRadius: '50%',
                         display: 'flex',
                         alignItems: 'center',

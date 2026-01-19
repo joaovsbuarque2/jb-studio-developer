@@ -1,4 +1,4 @@
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 import logoJB from '../assets/images/logoJB.png';
 
 function Home() {
@@ -22,44 +22,6 @@ function Home() {
                 experiências criativas com foco em performance, usabilidade e
                 futuro.
               </p>
-              <div className="d-flex gap-4 flex-wrap justify-content-center justify-content-lg-start">
-                <Button
-                  onClick={() => scrollToSection('projetos')}
-                  className="btn-custom"
-                  size="lg"
-                  style={{
-                    boxShadow: '0 15px 35px rgba(6, 182, 212, 0.4)',
-                    fontSize: '1.1rem',
-                    fontWeight: '600',
-                  }}
-                >
-                  Conheça nossos projetos
-                </Button>
-                <Button
-                  onClick={() => scrollToSection('contato')}
-                  variant="outline-light"
-                  size="lg"
-                  style={{
-                    borderRadius: '30px',
-                    padding: '15px 35px',
-                    borderWidth: '2px',
-                    fontSize: '1.1rem',
-                    fontWeight: '500',
-                    transition: 'all 0.3s ease',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.transform = 'translateY(-2px)';
-                    e.target.style.boxShadow =
-                      '0 10px 25px rgba(255, 255, 255, 0.2)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.transform = 'translateY(0)';
-                    e.target.style.boxShadow = 'none';
-                  }}
-                >
-                  Entre em contato
-                </Button>
-              </div>
             </div>
           </Col>
 

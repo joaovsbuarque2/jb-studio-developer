@@ -1,5 +1,4 @@
-import { Card, Col, Container, Image, Row } from 'react-bootstrap';
-import fotoCasal from '../assets/images/fotoCasal.jpg';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 function About() {
   const stacks = [
@@ -68,65 +67,26 @@ function About() {
             </Card>
 
             {/* Valores e Inspiração */}
-            <Row className="align-items-center mb-5">
-              <Col lg={6} data-aos="fade-right" data-aos-delay="300">
-                <Card className="card-custom p-4">
-                  <Card.Body>
-                    <h3 className="h4 mb-4 text-gradient">💡 Nossos Valores</h3>
-                    <p className="fs-5 mb-4 about-text-high-contrast">
-                      Acreditamos que tecnologia é mais do que código. É sobre{' '}
-                      <strong>propósito</strong>, <strong>pessoas</strong> e{' '}
-                      <strong>transformação</strong>.
-                    </p>
+            <Card
+              className="card-custom p-4 mb-5"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <Card.Body>
+                <h3 className="h4 mb-4 text-gradient">💡 Nossos Valores</h3>
+                <p className="fs-5 mb-4 about-text-high-contrast">
+                  Acreditamos que tecnologia é mais do que código. É sobre{' '}
+                  <strong>propósito</strong>, <strong>pessoas</strong> e{' '}
+                  <strong>transformação</strong>.
+                </p>
 
-                    <p className="fs-5 mb-4 about-text-high-contrast">
-                      Por isso, atuamos com ética, criatividade e foco em
-                      resultados reais, sempre buscando agregar valor e
-                      construir parcerias sólidas e de confiança.
-                    </p>
-                  </Card.Body>
-                </Card>
-              </Col>
-
-              <Col
-                lg={6}
-                className="text-center"
-                data-aos="fade-left"
-                data-aos-delay="400"
-              >
-                <div
-                  className="about-image-container"
-                  style={{
-                    maxWidth: '480px',
-                    width: '100%',
-                    aspectRatio: '1',
-                    background:
-                      'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2))',
-                    border: '3px solid rgba(59, 130, 246, 0.3)',
-                    borderRadius: '25px',
-                    margin: '0 auto',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    padding: '20px',
-                    boxShadow: '0 20px 60px rgba(59, 130, 246, 0.3)',
-                  }}
-                >
-                  <Image
-                    src={fotoCasal}
-                    alt="Equipe JB Developer Studio"
-                    className="about-couple-image"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      borderRadius: '20px',
-                      border: '2px solid rgba(255, 255, 255, 0.3)',
-                    }}
-                  />
-                </div>
-              </Col>
-            </Row>
+                <p className="fs-5 mb-4 about-text-high-contrast">
+                  Por isso, atuamos com ética, criatividade e foco em resultados
+                  reais, sempre buscando agregar valor e construir parcerias
+                  sólidas e de confiança.
+                </p>
+              </Card.Body>
+            </Card>
 
             {/* Objetivo */}
             <Card

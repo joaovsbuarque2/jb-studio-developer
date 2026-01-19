@@ -36,20 +36,6 @@ function Contact() {
       <section className="section">
         <Container>
           <Row>
-            <Col lg={8} className="mx-auto text-center">
-              <h1 className="section-title">Vamos Conversar?</h1>
-              <p className="section-subtitle">
-                Entre em contato para trocar ideias, colaborar em projetos ou
-                apenas bater um papo sobre tecnologia
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      <section className="section-alt section">
-        <Container>
-          <Row>
             <Col lg={8} className="mx-auto">
               {showAlert && (
                 <Alert variant="success" className="text-center">

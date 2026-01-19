@@ -1,6 +1,3 @@
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
 import About from '../components/About';
 import Company from '../components/Company';
 import Contact from '../components/Contact';
@@ -20,23 +17,7 @@ function JSStudioApp() {
         <Contact />
       </main>
 
-      {/* Seção para navegar para o Eleva */}
-      <section className="section-alt section">
-        <Container>
-          <Row>
-            <Col lg={8} className="mx-auto text-center">
-              <h2 className="section-title">Conheça nosso projeto Eleva</h2>
-              <p className="section-subtitle mb-4">
-                Um app de produtividade gamificado que está revolucionando como
-                as pessoas gerenciam suas tarefas.
-              </p>
-              <Button as={Link} to="/eleva" className="btn-custom" size="lg">
-                Descobrir Eleva 🚀
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      {/* Seção para navegar para os projetos */}
     </>
   );
 }
