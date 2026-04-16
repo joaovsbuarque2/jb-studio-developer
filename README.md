@@ -4,7 +4,7 @@ Site institucional da JB Studio Developer - empresa de tecnologia que cria solu�
 
 ## Projetos
 
-- **Eleva** - App de gestão de campeonatos e torneios esportivos
+- **Eleva** - App de gestão de produtividade real para campanhas e torneios(desenvolvimento).
 - **Velo** - App de PIX Recorrente (em desenvolvimento)
 
 ## Como Acessar
