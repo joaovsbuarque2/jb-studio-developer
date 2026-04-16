@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/jb-studio-developer/static/css/main.e0f4db04.css",
+    "main.js": "/jb-studio-developer/static/js/main.716c576c.js",
+    "static/js/453.c676234c.chunk.js": "/jb-studio-developer/static/js/453.c676234c.chunk.js",
+    "static/media/logoJB.png": "/jb-studio-developer/static/media/logoJB.f86635dcc88669629518.png",
+    "static/media/logo-jb.png": "/jb-studio-developer/static/media/logo-jb.9d54e92e22af3a85503d.png",
+    "static/media/eleva-home-atividade.jpeg": "/jb-studio-developer/static/media/eleva-home-atividade.0fe09c6cd1942c5b998b.jpeg",
+    "static/media/eleva-conf-tema.jpeg": "/jb-studio-developer/static/media/eleva-conf-tema.3e8b90ecfb9deb9d5fd3.jpeg",
+    "static/media/eleva-confi-sup.jpeg": "/jb-studio-developer/static/media/eleva-confi-sup.1e5481987ecc9ad7f5fd.jpeg",
+    "static/media/eleva-criar-torneio.jpeg": "/jb-studio-developer/static/media/eleva-criar-torneio.a4c9b934e07b258f5e58.jpeg",
+    "static/media/eleva-criar-tarfa.jpeg": "/jb-studio-developer/static/media/eleva-criar-tarfa.f45fb7cfdd23fc7f0ab0.jpeg",
+    "index.html": "/jb-studio-developer/index.html",
+    "main.e0f4db04.css.map": "/jb-studio-developer/static/css/main.e0f4db04.css.map",
+    "main.716c576c.js.map": "/jb-studio-developer/static/js/main.716c576c.js.map",
+    "453.c676234c.chunk.js.map": "/jb-studio-developer/static/js/453.c676234c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0f4db04.css",
+    "static/js/main.716c576c.js"
+  ]
+}
