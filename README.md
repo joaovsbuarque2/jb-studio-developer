@@ -1,6 +1,10 @@
-# JB Studio Developer - Eleva
+# JB Studio Developer - Eleva - Velo
 
 Website responsivo em React para apresentar a empresa JB Studio Developer e o app Eleva.
+
+## Site
+
+https://joaovsbuarque2.github.io/jb-studio-developer/
 
 ## 🛠️ Tecnologias
 
