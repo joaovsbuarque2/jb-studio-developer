@@ -1,67 +1,28 @@
-# JB Studio Developer - Eleva - Velo
+# JB Studio Developer
 
-Website responsivo em React para apresentar a empresa JB Studio Developer e o app Eleva.
+Site institucional da JB Studio Developer - empresa de tecnologia que cria soluções digitais.
 
-## Site
+## Projetos
 
-https://joaovsbuarque2.github.io/jb-studio-developer/
+- **Eleva** - App de gestão de campeonatos e torneios esportivos
+- **Velo** - App de PIX Recorrente (em desenvolvimento)
 
-## 🛠️ Tecnologias
+## Como Acessar
 
-- React 19.1.1 com React Router DOM
-- Bootstrap 5.3.8 e React Bootstrap
-- AOS (Animate On Scroll)
-- Create React App
-- ESLint + Prettier
-- Jest e React Testing Library
+Acesse o site completo com todos os projetos:
 
-## 📁 Estrutura
+🔗 **https://joaovsbuarque2.github.io/jb-studio-developer/**
 
-```
-src/
-├── components/          # Componentes compartilhados (Header, Home, About, etc.)
-├── components/eleva/    # Componentes do Eleva (ElevaHome, ElevaFeatures, etc.)
-├── pages/               # Páginas principais (JSStudioApp, ElevaApp)
-├── assets/              # Imagens e recursos
-└── App.js               # Roteamento
-```
+### Navegação
 
-## 🚀 Instalação
+- `/` - Página principal (JB Studio)
+- `/eleva` - Projeto Eleva
+- `/velo` - Projeto Velo
 
-Pré-requisitos: Node.js ≥16, Yarn ou npm
+## Tecnologias
 
-```bash
-git clone <url-do-repositorio>
-cd jb-studio-developer
-yarn install  # ou npm install
-yarn start    # ou npm start
-```
-
-Aplicação em [http://localhost:3000](http://localhost:3000).
-
-### Scripts
-
-- `start`: Servidor de desenvolvimento
-- `build`: Build de produção
-- `test`: Executa testes
-- `lint`: Linting
-- `format`: Formatação com Prettier
-
-## 🌟 Funcionalidades
-
-- Website portfólio da JB Studio Developer com seções: Home, Sobre, Empresa, Projetos, Contato
-- Landing page do Eleva com recursos, roadmap e contato
-
-## 📈 Roadmap do Eleva
-
-- **Atual**: Beta com tarefas gamificadas
-- **Próximo**: Lançamento MVP, features sociais, torneios, análises avançadas
-
-## 📞 Contato
-
-- **JB Studio Developer**: contato@jb-studio-developer.com
-- **Eleva**: eleva@jb-studio-developer.com
+React, React Router, Bootstrap, AOS
 
 ---
 
-Desenvolvido com ❤️ pela equipe JB Studio Developer
+Desenvolvido por JB Studio Developer
