@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/jb-studio-developer">
       <div className="App">
         <Routes>
           <Route path="/" element={<JSStudioApp />} />

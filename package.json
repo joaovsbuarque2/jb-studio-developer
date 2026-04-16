@@ -1,6 +1,7 @@
 {
   "name": "jb-studio-developer",
   "version": "0.1.0",
+  "homepage": "https://joaovsbuarque2.github.io/jb-studio-developer/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -22,7 +23,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js,.jsx",
-    "format": "prettier --write src/**/*.{js,jsx,json,css,md}"
+    "format": "prettier --write src/**/*.{js,jsx,json,css,md}",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -39,6 +42,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.6.2"
   }
 }
